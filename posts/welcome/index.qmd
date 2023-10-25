@@ -1,12 +1,12 @@
 ---
-title: "Welcome To What Can Data Do?"
+title: "What Can Data Do?"
 date: "2023-10-25"
 categories: [news]
 ---
 
 Welcome, data enthusiasts to "What Can Data Do?" – a digital realm where we embark on a never ending story that attempts to decode the mysteries and marvels of the data-driven world. I'm Lloyd Palum, your guide and the voice behind this blog.
     
-<img src="wcdd.jpg" alt="wcdd" width="350"/>
+<p><center><img src="wcdd.jpg" alt="wcdd" width="350"/></center></p>
 
 In this age of information, we find ourselves surrounded by a constant stream of data. It flows through our devices, our businesses, and our daily lives. Data is more than just numbers and figures; it's the key to unlocking the future. It's the backbone of innovations, the heart of progress, and the foundation of insights that drive both individual curiosity and business success.
 

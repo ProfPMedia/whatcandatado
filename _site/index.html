@@ -72,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Courses">Courses <span class="quarto-category-count">(6)</span></div><div class="category" data-category="DIA">DIA <span class="quarto-category-count">(2)</span></div><div class="category" data-category="DSAS">DSAS <span class="quarto-category-count">(5)</span></div><div class="category" data-category="DeltaLake">DeltaLake <span class="quarto-category-count">(1)</span></div><div class="category" data-category="EDA">EDA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ML-OPS">ML-OPS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="MLflow">MLflow <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Spark">Spark <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data-analysis">data-analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -176,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -194,43 +194,242 @@ ul.task-list li input[type="checkbox"] {
         </option>
      </select>
   </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1698206400000" data-listing-file-modified-sort="1698249976005" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="body">
-<a href="./posts/welcome/index.html">
-<h3 class="no-anchor listing-title">
-Welcome To What Can Data Do?
-</h3>
-<div class="listing-subtitle">
-
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="news" data-listing-date-sort="1698206400000" data-listing-file-modified-sort="1698258546696" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/welcome/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/welcome/wcdd.jpg" alt="wcdd" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+What Can Data Do?
+</h5>
+<div class="listing-reading-time card-text text-muted">
+2 min
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/welcome/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 Welcome, data enthusiasts to “What Can Data Do?” – a digital…
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html">
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Oct 25, 2023
 </div>
-<div class="listing-reading-time">
-2 min
+</div>
+</div>
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="1" data-categories="DIA,Courses,DSAS" data-listing-date-sort="1696478400000" data-listing-file-modified-sort="1698265488176" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/DoingDataAtScale/Building a Data Intensive Applications/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/DoingDataAtScale/Building a Data Intensive Applications/citibike.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Building Data Intensive Applications
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('DIA'); return false;">
+DIA
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Courses'); return false;">
+Courses
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DSAS'); return false;">
+DSAS
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 5, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="MLflow,Courses,DSAS,ML-OPS" data-listing-date-sort="1696392000000" data-listing-file-modified-sort="1698265492964" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/DoingDataAtScale/MLflow/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/DoingDataAtScale/MLflow/mlflow.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+MLflow - Overview
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('MLflow'); return false;">
+MLflow
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Courses'); return false;">
+Courses
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DSAS'); return false;">
+DSAS
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('ML-OPS'); return false;">
+ML-OPS
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 4, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="DeltaLake,Courses,DSAS" data-listing-date-sort="1696305600000" data-listing-file-modified-sort="1698265498660" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/DoingDataAtScale/Delta Lake/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/DoingDataAtScale/Delta Lake/deltalake.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Delta Lake
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('DeltaLake'); return false;">
+DeltaLake
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Courses'); return false;">
+Courses
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DSAS'); return false;">
+DSAS
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 3, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Spark,Courses,DSAS" data-listing-date-sort="1696219200000" data-listing-file-modified-sort="1698265505944" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/DoingDataAtScale/Spark/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/DoingDataAtScale/Spark/spark.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Spark- Overview
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Spark'); return false;">
+Spark
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Courses'); return false;">
+Courses
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DSAS'); return false;">
+DSAS
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 2, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="DIA,Courses,DSAS" data-listing-date-sort="1696132800000" data-listing-file-modified-sort="1698265465087" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/DoingDataAtScale/Data Intensive Applications/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/DoingDataAtScale/Data Intensive Applications/dia.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Data Intensive Applications - Overview
+</h5>
+<div class="listing-reading-time card-text text-muted">
+1 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('DIA'); return false;">
+DIA
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Courses'); return false;">
+Courses
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DSAS'); return false;">
+DSAS
+</div>
+</div>
+<div class="card-text listing-description">
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 1, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="data-analysis,EDA,Courses" data-listing-date-sort="1696132800000" data-listing-file-modified-sort="1698263856216" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<a href="./posts/DoingDataWranglingRight/ddar.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts/DoingDataWranglingRight/ddar_files/figure-html/cell-12-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Doing Data Analysis Right!
+</h5>
+<div class="listing-reading-time card-text text-muted">
+11 min
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('data-analysis'); return false;">
+data-analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('EDA'); return false;">
+EDA
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Courses'); return false;">
+Courses
+</div>
+</div>
+<div class="card-text listing-description">
+Course materials for Doing Data Analysis Right
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Oct 1, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">

@@ -2,30 +2,51 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To What Can Data Do?",
+    "title": "What Can Data Do?",
     "section": "",
-    "text": "Welcome, data enthusiasts to “What Can Data Do?” – a digital realm where we embark on a never ending story that attempts to decode the mysteries and marvels of the data-driven world. I’m Lloyd Palum, your guide and the voice behind this blog.\n\nIn this age of information, we find ourselves surrounded by a constant stream of data. It flows through our devices, our businesses, and our daily lives. Data is more than just numbers and figures; it’s the key to unlocking the future. It’s the backbone of innovations, the heart of progress, and the foundation of insights that drive both individual curiosity and business success.\nAs the CTO at Tensteet (a transportation analytics company), an Adjunct Instructor at the Georgen Institute of Data Science, and a passionate explorer of Machine Learning, Software Development, IoT, and Cloud Computing, I’ve been on a road through the vast data landscape. My knowledge, experiences, and occasional eureka moments are what I want to share with you through this blog.\nIn the era of ‘big data,’ where information is power, ‘What Can Data Do?’ becomes the central question. It’s a question that keeps data analysts and tech enthusiasts awake at night, and it’s a question that drives our quest for understanding. From leveraging data to make your business more efficient to uncovering the hidden patterns in the digital world, we’ll explore it all.\nBut, ‘What Can Data Do?’ is not just about the ‘how.’ It’s also about the ‘why.’ Why should you care about data? Why should you invest your time and energy in understanding its intricacies? Because, in data, we trust. Data is more than just numbers; it’s the foundation of knowledge, the essence of decision-making, and the bridge to innovation.\nSo, join me. Let’s unravel the potential of data, discuss the latest trends, tackle complex challenges, and dive deep into the world of data science. Whether you’re a seasoned data professional or just starting your data-driven adventure, this blog is your space to explore, learn, and engage.\n‘What Can Data Do?’ is not just a question. It’s an invitation to explore a world where data is king, and together, we’ll uncover the magic it holds.\nStay tuned for regular updates, insights, and discussions. In data, we trust.\nWelcome!\nProf. P."
+    "text": "Welcome, data enthusiasts to “What Can Data Do?” – a digital realm where we embark on a never ending story that attempts to decode the mysteries and marvels of the data-driven world. I’m Lloyd Palum, your guide and the voice behind this blog.\n\n\n\n\n\nIn this age of information, we find ourselves surrounded by a constant stream of data. It flows through our devices, our businesses, and our daily lives. Data is more than just numbers and figures; it’s the key to unlocking the future. It’s the backbone of innovations, the heart of progress, and the foundation of insights that drive both individual curiosity and business success.\nAs the CTO at Tensteet (a transportation analytics company), an Adjunct Instructor at the Georgen Institute of Data Science, and a passionate explorer of Machine Learning, Software Development, IoT, and Cloud Computing, I’ve been on a road through the vast data landscape. My knowledge, experiences, and occasional eureka moments are what I want to share with you through this blog.\nIn the era of ‘big data,’ where information is power, ‘What Can Data Do?’ becomes the central question. It’s a question that keeps data analysts and tech enthusiasts awake at night, and it’s a question that drives our quest for understanding. From leveraging data to make your business more efficient to uncovering the hidden patterns in the digital world, we’ll explore it all.\nBut, ‘What Can Data Do?’ is not just about the ‘how.’ It’s also about the ‘why.’ Why should you care about data? Why should you invest your time and energy in understanding its intricacies? Because, in data, we trust. Data is more than just numbers; it’s the foundation of knowledge, the essence of decision-making, and the bridge to innovation.\nSo, join me. Let’s unravel the potential of data, discuss the latest trends, tackle complex challenges, and dive deep into the world of data science. Whether you’re a seasoned data professional or just starting your data-driven adventure, this blog is your space to explore, learn, and engage.\n‘What Can Data Do?’ is not just a question. It’s an invitation to explore a world where data is king, and together, we’ll uncover the magic it holds.\nStay tuned for regular updates, insights, and discussions. In data, we trust.\nWelcome!\nProf. P."
+  },
+  {
+    "objectID": "posts/DoingDataAtScale/Spark/index.html",
+    "href": "posts/DoingDataAtScale/Spark/index.html",
+    "title": "Spark- Overview",
+    "section": "",
+    "text": "Spark"
+  },
+  {
+    "objectID": "posts/DoingDataAtScale/MLflow/index.html",
+    "href": "posts/DoingDataAtScale/MLflow/index.html",
+    "title": "MLflow - Overview",
+    "section": "",
+    "text": "MLflow"
+  },
+  {
+    "objectID": "posts/DoingDataAtScale/Delta Lake/index.html",
+    "href": "posts/DoingDataAtScale/Delta Lake/index.html",
+    "title": "Delta Lake",
+    "section": "",
+    "text": "Delta Lake"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Data Series",
     "section": "",
-    "text": "Data Series\n\nDoing Data at Scale\nData Science @ Scale with Spark, Delta Lake, and MLflow.\n\n\n\nData Posts\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nWelcome To What Can Data Do?\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nOct 25, 2023\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Data Series\n\nDoing Data at Scale\nData Science @ Scale with Spark, Delta Lake, and MLflow.\n\n\n\nData Posts\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\nWhat Can Data Do?\n\n\n2 min\n\n\n\nnews\n\n\n\n\n\n\n\nOct 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding Data Intensive Applications\n\n\n1 min\n\n\n\nDIA\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n1 min\n\n\n\nMLflow\n\n\nCourses\n\n\nDSAS\n\n\nML-OPS\n\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDelta Lake\n\n\n1 min\n\n\n\nDeltaLake\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n1 min\n\n\n\nSpark\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nData Intensive Applications - Overview\n\n\n1 min\n\n\n\nDIA\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDoing Data Analysis Right!\n\n\n11 min\n\n\n\ndata-analysis\n\n\nEDA\n\n\nCourses\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "archive.html",
     "href": "archive.html",
     "title": "Archive",
     "section": "",
-    "text": "Welcome To What Can Data Do?\n\n\n\n\n\n\n\n\n\nOct 25, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "What Can Data Do?\n\n\n\n\n\n\n\n\n\nOct 25, 2023\n\n\n\n\n\n\n\n\nBuilding Data Intensive Applications\n\n\n\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\nDelta Lake\n\n\n\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\nData Intensive Applications - Overview\n\n\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\nDoing Data Analysis Right!\n\n\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "doingdata-series.html",
     "href": "doingdata-series.html",
     "title": "Series: Doing Data at Scale",
     "section": "",
-    "text": "No matching items"
+    "text": "Building Data Intensive Applications\n\n\n1 min\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n1 min\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDelta Lake\n\n\n1 min\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n1 min\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nData Intensive Applications - Overview\n\n\n1 min\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -33,5 +54,40 @@
     "title": "About",
     "section": "",
     "text": "Welcome to What Can Data Do? - a place for the data curious! Unleashing the power of data, one fascinating byte at a time.\nHi, I’m Lloyd Palum.\nMy students call me Prof. P., and with more than 30 years of experience in building data-intensive systems and teaching how to coax value from data at scale, I can help you crack the code and become more data-capable.\nLet’s unlock your data’s value together!"
+  },
+  {
+    "objectID": "posts/DoingDataAtScale/Data Intensive Applications/index.html",
+    "href": "posts/DoingDataAtScale/Data Intensive Applications/index.html",
+    "title": "Data Intensive Applications - Overview",
+    "section": "",
+    "text": "Data Intensive Application"
+  },
+  {
+    "objectID": "posts/DoingDataAtScale/Building a Data Intensive Applications/index.html",
+    "href": "posts/DoingDataAtScale/Building a Data Intensive Applications/index.html",
+    "title": "Building Data Intensive Applications",
+    "section": "",
+    "text": "Spark"
+  },
+  {
+    "objectID": "posts/DoingDataWranglingRight/ddar.html",
+    "href": "posts/DoingDataWranglingRight/ddar.html",
+    "title": "Doing Data Analysis Right!",
+    "section": "",
+    "text": "Course materials for Doing Data Analysis Right\nInspiration for the Course - Good Data Analysis - Reproducible Data Analysis in Jupyter - Our World In Data\nPrerequisites - Familiarity with a programming language, preferably Python, although the code will be accessible, so if you have exposure (proficiency) with another language, you should be able to follow along just fine. - Basic understanding of descriptive statistics like a mean, median, or standard deviation. - An keen interest in the methods and art form of doing data analysis\nReferences - Python - Pandas - Plotly Express\nAfter finishing this course you will be able to analyze a complex dataset of your choosing for the purpose of informing better decision making. This will be facilitated by an illustrated end to end example with clear and consise description of how and why to perform each step of the analysis process and ultimately communicate your results to a non-technical audience."
+  },
+  {
+    "objectID": "posts/DoingDataWranglingRight/ddar.html#link-to-the-data-analysis-report",
+    "href": "posts/DoingDataWranglingRight/ddar.html#link-to-the-data-analysis-report",
+    "title": "Doing Data Analysis Right!",
+    "section": "Link to the Data Analysis Report",
+    "text": "Link to the Data Analysis Report\nAutomated Data Analysis Report\n\nmy_report = sv.analyze(df)\nmy_report.show_html()\n\n\n\n\nReport SWEETVIZ_REPORT.html was generated! NOTEBOOK/COLAB USERS: the web browser MAY not pop up, regardless, the report IS saved in your notebook/colab files."
+  },
+  {
+    "objectID": "posts/DoingDataWranglingRight/ddar.html#data-distributions",
+    "href": "posts/DoingDataWranglingRight/ddar.html#data-distributions",
+    "title": "Doing Data Analysis Right!",
+    "section": "Data Distributions",
+    "text": "Data Distributions\nA key step in Data Mise en Place is the exploration of data distributions. Many time a careless analyst will rely just on the use of descriptive statistics like mean, variance, median, etc. but this leave them vulnerable to missing the underlying character of the data. The key insight (experience) is there are an infinite number of data sets that have the same mean although, they may (and usually do) have radically different distributions and most importantly outliers.\nDefinition: Data distributions refer to the way data points are spread or distributed across different values in a dataset. Understanding data distributions is fundamental in data analysis as it allows us to gain insights into the central tendencies, variations, and outliers present in the data.\nImportance: Analyzing data distributions is essential because it provides a clear and concise summary of the dataset’s characteristics. It helps us identify the most common values, assess the spread of data, and detect any unusual patterns or extreme values. Having a thorough understanding of data distributions aids in making informed decisions about data transformations, choosing appropriate statistical tests, and selecting the right models for predictive analysis.\nHow to Perform on Data:\n\nHistograms: A histogram is a graphical representation of the data distribution, showing the frequency or count of data points falling into predefined bins or intervals. To create a histogram:\n\nChoose the number of bins or intervals (often denoted as ‘k’) based on the data’s range and size.\nDivide the data range into ‘k’ equal-width intervals.\nCount the number of data points that fall within each interval and plot them as bars.\n\nHistograms provide an immediate visual understanding of data spread and can reveal underlying patterns, such as whether the data is normally distributed, skewed, or multi-modal.\nCumulative Distribution Functions (CDF): A cumulative distribution function is another graphical representation of data distribution that shows the probability that a random data point will be found at or below a given value. To construct a CDF:\n\nSort the data points in ascending order.\nCalculate the cumulative probability for each data point as the fraction of data points below or equal to it.\nPlot the data points against their cumulative probabilities.\n\nCDFs are helpful in understanding percentiles and quantiles, enabling us to answer questions like “What percentage of data falls below a certain value?”\nQ-Q Plots (Quantile-Quantile Plots): Q-Q plots compare the quantiles of a dataset against the quantiles of a theoretical distribution (usually the normal distribution). To create a Q-Q plot:\n\nSort the data in ascending order.\nCalculate the theoretical quantiles from the chosen distribution.\nPlot the data quantiles against the corresponding theoretical quantiles.\n\nQ-Q plots help us assess whether the data follows a specific distribution or if there are significant deviations from it.\n\nBy combining histograms, CDFs, and Q-Q plots in data analysis, we gain a comprehensive understanding of the data distribution, enabling us to make more accurate inferences and build robust models in various fields, including finance, healthcare, and environmental sciences.\n\ngenerate_dist_examples()\n\n\n                                                \n\n\n\n                                                \n\n\n\n                                                \n\n\nNow that we have a sense of how the distributions of data can give us insight. Let’s turn our attention to our working example. Let’s look at the distributions of World GDP in dollars and primary energy consumption in Terawatt hours.\n\ncountries_of_interest = ['Australia', 'Brazil', 'Canada','China', 'France', 'Germany', 'India', 'Japan','Mexico', 'Russia',\n       'Saudi Arabia', 'United Kingdom','United States','Vietnam']\npdf = df[df['country'].isin(countries_of_interest)].dropna()\npdf['dollar_per_capita'] = (pdf['gdp']/pdf['population'])\npdf['kwhr_per_capita'] = (pdf['primary_energy_consumption']*1000000000/pdf['population'])\npdf['dollar_per_kwhr'] = pdf['dollar_per_capita']/pdf['kwhr_per_capita']\npdf.head()\n\n\n\n\n\n\n\n\ncountry\nyear\niso_code\npopulation\ngdp\nprimary_energy_consumption\nfossil_share_energy\nlow_carbon_share_energy\ndollar_per_capita\nkwhr_per_capita\ndollar_per_kwhr\n\n\n\n\n1577\nAustralia\n1965\nAUS\n11359442.0\n1.851121e+11\n425.760\n94.437\n5.563\n16295.881193\n37480.714282\n0.434780\n\n\n1578\nAustralia\n1966\nAUS\n11592675.0\n1.902576e+11\n446.102\n94.928\n5.072\n16411.878879\n38481.368623\n0.426489\n\n\n1579\nAustralia\n1967\nAUS\n11809114.0\n2.031107e+11\n473.093\n95.050\n4.950\n17199.486338\n40061.684560\n0.429325\n\n\n1580\nAustralia\n1968\nAUS\n12027268.0\n2.150465e+11\n501.694\n95.135\n4.865\n17879.912915\n41713.047385\n0.428641\n\n\n1581\nAustralia\n1969\nAUS\n12268351.0\n2.281273e+11\n522.428\n94.913\n5.087\n18594.780459\n42583.392014\n0.436667\n\n\n\n\n\n\n\n\n# Creating the scatter plot using Plotly Express\nfig = px.scatter(pdf, x='gdp', y='primary_energy_consumption', color='country', hover_data=['iso_code', 'year','gdp', 'primary_energy_consumption'],\n                 labels={'X': 'GDP in $', 'Y': 'Energy Consumption TWHrs'},\n                 title='World GDP vs. Energy Consumption', height=480)\n\n# Display the plot\nfig.show()\n\n\n                                                \n\n\n\n# Create the stacked bar chart using Plotly Express\nfig = px.bar(pdf, x='year', y='dollar_per_kwhr', color='country', barmode='stack',\n             labels={'year': 'year', 'dollar_per_kwhr': 'dollar_per_kwhr', 'country': 'country'},\n             title='GDP output per KWhr per capital', height=640)\n\n# Display the plot\nfig.show()\n\n\n                                                \n\n\n\nimport matplotlib.pyplot as plt\npdf[pdf.country=='Vietnam'].plot.bar(x='year', y='dollar_per_kwhr')\nplt.xlabel('year')\nplt.ylabel('GDP output per capita per kwhr')\nplt.show()"
   }
 ]
