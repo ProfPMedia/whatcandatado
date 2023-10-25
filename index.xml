@@ -5,50 +5,37 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>whatcandatado</title>
+<title>What Can Data Do? - A place for the Data Curious.</title>
 <link>https://www.whatcandatado.com/index.html</link>
 <atom:link href="https://www.whatcandatado.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A place for the data curious! Unleashing the power of data, one fascinating byte at a time.</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Mon, 23 Oct 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 25 Oct 2023 04:00:00 GMT</lastBuildDate>
 <item>
-  <title>Post With Code</title>
-  <dc:creator>Harlow Malloc</dc:creator>
-  <link>https://www.whatcandatado.com/posts/post-with-code/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<p>This is a post with executable code.</p>
-
-
-
- ]]></description>
-  <category>news</category>
-  <category>code</category>
-  <category>analysis</category>
-  <guid>https://www.whatcandatado.com/posts/post-with-code/index.html</guid>
-  <pubDate>Mon, 23 Oct 2023 04:00:00 GMT</pubDate>
-  <media:content url="https://www.whatcandatado.com/posts/post-with-code/image.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Welcome To My Blog</title>
-  <dc:creator>Tristan O&#39;Malley</dc:creator>
+  <title>Welcome To What Can Data Do?</title>
   <link>https://www.whatcandatado.com/posts/welcome/index.html</link>
   <description><![CDATA[ 
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="https://www.whatcandatado.com/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+<p>Welcome, data enthusiasts to “What Can Data Do?” – a digital realm where we embark on a never ending story that attempts to decode the mysteries and marvels of the data-driven world. I’m Lloyd Palum, your guide and the voice behind this blog.</p>
+<p><img src="https://www.whatcandatado.com/posts/welcome/wcdd.jpg" alt="wcdd" width="350"></p>
+<p>In this age of information, we find ourselves surrounded by a constant stream of data. It flows through our devices, our businesses, and our daily lives. Data is more than just numbers and figures; it’s the key to unlocking the future. It’s the backbone of innovations, the heart of progress, and the foundation of insights that drive both individual curiosity and business success.</p>
+<p>As the CTO at Tensteet (a transportation analytics company), an Adjunct Instructor at the Georgen Institute of Data Science, and a passionate explorer of Machine Learning, Software Development, IoT, and Cloud Computing, I’ve been on a road through the vast data landscape. My knowledge, experiences, and occasional eureka moments are what I want to share with you through this blog.</p>
+<p>In the era of ‘big data,’ where information is power, ‘What Can Data Do?’ becomes the central question. It’s a question that keeps data analysts and tech enthusiasts awake at night, and it’s a question that drives our quest for understanding. From leveraging data to make your business more efficient to uncovering the hidden patterns in the digital world, we’ll explore it all.</p>
+<p>But, ‘What Can Data Do?’ is not just about the ‘how.’ It’s also about the ‘why.’ Why should you care about data? Why should you invest your time and energy in understanding its intricacies? Because, in data, we trust. Data is more than just numbers; it’s the foundation of knowledge, the essence of decision-making, and the bridge to innovation.</p>
+<p>So, join me. Let’s unravel the potential of data, discuss the latest trends, tackle complex challenges, and dive deep into the world of data science. Whether you’re a seasoned data professional or just starting your data-driven adventure, this blog is your space to explore, learn, and engage.</p>
+<p>‘What Can Data Do?’ is not just a question. It’s an invitation to explore a world where data is king, and together, we’ll uncover the magic it holds.</p>
+<p>Stay tuned for regular updates, insights, and discussions. In data, we trust.</p>
+<p>Welcome!</p>
+<p>Prof.&nbsp;P.</p>
 
 
 
  ]]></description>
   <category>news</category>
   <guid>https://www.whatcandatado.com/posts/welcome/index.html</guid>
-  <pubDate>Fri, 20 Oct 2023 04:00:00 GMT</pubDate>
+  <pubDate>Wed, 25 Oct 2023 04:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
