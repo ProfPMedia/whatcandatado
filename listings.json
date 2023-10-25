@@ -2,17 +2,35 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/welcome/index.html"
+      "/posts/welcome/index.html",
+      "/posts/DoingDataAtScale/Building a Data Intensive Applications/index.html",
+      "/posts/DoingDataAtScale/MLflow/index.html",
+      "/posts/DoingDataAtScale/Delta Lake/index.html",
+      "/posts/DoingDataAtScale/Spark/index.html",
+      "/posts/DoingDataAtScale/Data Intensive Applications/index.html",
+      "/posts/DoingDataWranglingRight/ddar.html"
     ]
   },
   {
     "listing": "/archive.html",
     "items": [
-      "/posts/welcome/index.html"
+      "/posts/welcome/index.html",
+      "/posts/DoingDataAtScale/Building a Data Intensive Applications/index.html",
+      "/posts/DoingDataAtScale/MLflow/index.html",
+      "/posts/DoingDataAtScale/Delta Lake/index.html",
+      "/posts/DoingDataAtScale/Spark/index.html",
+      "/posts/DoingDataAtScale/Data Intensive Applications/index.html",
+      "/posts/DoingDataWranglingRight/ddar.html"
     ]
   },
   {
     "listing": "/doingdata-series.html",
-    "items": []
+    "items": [
+      "/posts/DoingDataAtScale/Building a Data Intensive Applications/index.html",
+      "/posts/DoingDataAtScale/MLflow/index.html",
+      "/posts/DoingDataAtScale/Delta Lake/index.html",
+      "/posts/DoingDataAtScale/Spark/index.html",
+      "/posts/DoingDataAtScale/Data Intensive Applications/index.html"
+    ]
   }
 ]
