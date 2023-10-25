@@ -1,6 +1,6 @@
 ---
 title: "What Can Data Do?"
-date: "2023-10-25"
+date: "2023-07-24"
 categories: [news]
 ---
 

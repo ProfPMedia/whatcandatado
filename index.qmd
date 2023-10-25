@@ -1,7 +1,7 @@
 ---
 listing:
   contents: posts
-  sort: "date desc"
+  sort: "date asc"
   type: grid
   categories: true
   sort-ui: [title, date]

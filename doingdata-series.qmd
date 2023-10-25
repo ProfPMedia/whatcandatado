@@ -2,7 +2,7 @@
 title: "Series: Doing Data at Scale"
 listing:
   contents: posts/DoingDataAtScale
-  sort: "date desc"
+  sort: "date asc"
   type: grid
   categories: false
   sort-ui: false

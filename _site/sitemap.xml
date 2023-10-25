@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.whatcandatado.com/posts/welcome/index.html</loc>
-    <lastmod>2023-10-25T20:25:21.484Z</lastmod>
+    <lastmod>2023-10-25T20:53:00.889Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Spark/index.html</loc>
-    <lastmod>2023-10-25T20:25:18.856Z</lastmod>
+    <lastmod>2023-10-25T20:52:57.533Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/MLflow/index.html</loc>
-    <lastmod>2023-10-25T20:25:17.232Z</lastmod>
+    <lastmod>2023-10-25T20:52:56.177Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Delta Lake/index.html</loc>
-    <lastmod>2023-10-25T20:25:15.872Z</lastmod>
+    <lastmod>2023-10-25T20:52:54.773Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/index.html</loc>
-    <lastmod>2023-10-25T20:25:14.816Z</lastmod>
+    <lastmod>2023-10-25T20:52:53.709Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/archive.html</loc>
-    <lastmod>2023-10-25T20:25:12.964Z</lastmod>
+    <lastmod>2023-10-25T20:52:51.661Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/doingdata-series.html</loc>
-    <lastmod>2023-10-25T20:25:13.920Z</lastmod>
+    <lastmod>2023-10-25T20:52:52.737Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/about.html</loc>
-    <lastmod>2023-10-25T20:25:15.160Z</lastmod>
+    <lastmod>2023-10-25T20:52:54.109Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Data Intensive Applications/index.html</loc>
-    <lastmod>2023-10-25T20:25:16.548Z</lastmod>
+    <lastmod>2023-10-25T20:52:55.521Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Building a Data Intensive Applications/index.html</loc>
-    <lastmod>2023-10-25T20:25:17.872Z</lastmod>
+    <lastmod>2023-10-25T20:52:56.853Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataWranglingRight/ddar.html</loc>
-    <lastmod>2023-10-25T20:25:20.716Z</lastmod>
+    <lastmod>2023-10-25T20:52:59.861Z</lastmod>
   </url>
 </urlset>
