@@ -11,42 +11,42 @@
     "href": "posts/DoingDataAtScale/Spark/index.html",
     "title": "Spark- Overview",
     "section": "",
-    "text": "Spark"
+    "text": "Spark\n\n\n\n# Coming in the spring of 2024"
   },
   {
     "objectID": "posts/DoingDataAtScale/MLflow/index.html",
     "href": "posts/DoingDataAtScale/MLflow/index.html",
     "title": "MLflow - Overview",
     "section": "",
-    "text": "MLflow"
+    "text": "MLflow\n\n\n\n# Coming in the spring of 2024"
   },
   {
     "objectID": "posts/DoingDataAtScale/Delta Lake/index.html",
     "href": "posts/DoingDataAtScale/Delta Lake/index.html",
-    "title": "Delta Lake",
+    "title": "Delta Lake - Overview",
     "section": "",
-    "text": "Delta Lake"
+    "text": "Delta Lake\n\n\n\n# Coming in the spring of 2024"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Data Series",
     "section": "",
-    "text": "Data Series\n\nDoing Data at Scale\nData Science @ Scale with Spark, Delta Lake, and MLflow.\n\n\n\nData Posts\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\nWhat Can Data Do?\n\n\n2 min\n\n\n\nnews\n\n\n\n\n\n\n\nOct 25, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding Data Intensive Applications\n\n\n1 min\n\n\n\nDIA\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n1 min\n\n\n\nMLflow\n\n\nCourses\n\n\nDSAS\n\n\nML-OPS\n\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDelta Lake\n\n\n1 min\n\n\n\nDeltaLake\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n1 min\n\n\n\nSpark\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nData Intensive Applications - Overview\n\n\n1 min\n\n\n\nDIA\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDoing Data Analysis Right!\n\n\n11 min\n\n\n\ndata-analysis\n\n\nEDA\n\n\nCourses\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Data Series\n\nDoing Data at Scale\nData Science @ Scale with Spark, Delta Lake, and MLflow.\n\n\n\nData Posts\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\nWhat Can Data Do?\n\n\n2 min\n\n\n\nnews\n\n\n\n\n\n\n\nJul 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDoing Data Analysis Right!\n\n\n11 min\n\n\n\ndata-analysis\n\n\nEDA\n\n\nCourses\n\n\n\n\n\n\n\nSep 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nData Intensive Applications - Overview\n\n\n1 min\n\n\n\nDIA\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n1 min\n\n\n\nSpark\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDelta Lake - Overview\n\n\n1 min\n\n\n\nDeltaLake\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n1 min\n\n\n\nMLflow\n\n\nCourses\n\n\nDSAS\n\n\nML-OPS\n\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding Data Intensive Applications - forecasting bike inventory\n\n\n1 min\n\n\n\nDIA\n\n\nCourses\n\n\nDSAS\n\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "archive.html",
     "href": "archive.html",
     "title": "Archive",
     "section": "",
-    "text": "What Can Data Do?\n\n\n\n\n\n\n\n\n\nOct 25, 2023\n\n\n\n\n\n\n\n\nBuilding Data Intensive Applications\n\n\n\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\nDelta Lake\n\n\n\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\nData Intensive Applications - Overview\n\n\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\nDoing Data Analysis Right!\n\n\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Building Data Intensive Applications - forecasting bike inventory\n\n\n\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\nDelta Lake - Overview\n\n\n\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\nData Intensive Applications - Overview\n\n\n\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\nDoing Data Analysis Right!\n\n\n\n\n\n\n\n\n\nSep 9, 2023\n\n\n\n\n\n\n\n\nWhat Can Data Do?\n\n\n\n\n\n\n\n\n\nJul 24, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "doingdata-series.html",
     "href": "doingdata-series.html",
     "title": "Series: Doing Data at Scale",
     "section": "",
-    "text": "Building Data Intensive Applications\n\n\n1 min\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n1 min\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDelta Lake\n\n\n1 min\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n1 min\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nData Intensive Applications - Overview\n\n\n1 min\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Data Intensive Applications - Overview\n\n\n1 min\n\n\n\n\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSpark- Overview\n\n\n1 min\n\n\n\n\n\n\nOct 2, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDelta Lake - Overview\n\n\n1 min\n\n\n\n\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMLflow - Overview\n\n\n1 min\n\n\n\n\n\n\nOct 4, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding Data Intensive Applications - forecasting bike inventory\n\n\n1 min\n\n\n\n\n\n\nOct 5, 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -60,14 +60,14 @@
     "href": "posts/DoingDataAtScale/Data Intensive Applications/index.html",
     "title": "Data Intensive Applications - Overview",
     "section": "",
-    "text": "Data Intensive Application"
+    "text": "Data Intensive Application\n\n\n\n# Coming in the spring of 2024"
   },
   {
     "objectID": "posts/DoingDataAtScale/Building a Data Intensive Applications/index.html",
     "href": "posts/DoingDataAtScale/Building a Data Intensive Applications/index.html",
-    "title": "Building Data Intensive Applications",
+    "title": "Building Data Intensive Applications - forecasting bike inventory",
     "section": "",
-    "text": "Spark"
+    "text": "Citibike\n\n\n\n# Coming in the spring of 2024"
   },
   {
     "objectID": "posts/DoingDataWranglingRight/ddar.html",
