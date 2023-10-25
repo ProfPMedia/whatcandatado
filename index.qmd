@@ -4,12 +4,18 @@ listing:
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: false
-  filter-ui: false
+  sort-ui: true
+  filter-ui: true
   feed: true
+  fields: [date, title, reading-time, description, categories]
 page-layout: full
 title-block-banner: false
 comments: false
 ---
 
+# Data Series
 
+##### [Doing Data at Scale](doingdata-series.html)
+Data Science @ Scale with Spark, Delta Lake, and MLflow.
+
+# Data Posts

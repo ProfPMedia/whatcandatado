@@ -1,12 +1,27 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
-date: "2023-10-20"
+title: "Welcome To What Can Data Do?"
+date: "2023-10-25"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+Welcome, data enthusiasts to "What Can Data Do?" – a digital realm where we embark on a never ending story that attempts to decode the mysteries and marvels of the data-driven world. I'm Lloyd Palum, your guide and the voice behind this blog.
+    
+<img src="wcdd.jpg" alt="wcdd" width="350"/>
 
-![](thumbnail.jpg)
+In this age of information, we find ourselves surrounded by a constant stream of data. It flows through our devices, our businesses, and our daily lives. Data is more than just numbers and figures; it's the key to unlocking the future. It's the backbone of innovations, the heart of progress, and the foundation of insights that drive both individual curiosity and business success.
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+As the CTO at Tensteet (a transportation analytics company), an Adjunct Instructor at the Georgen Institute of Data Science, and a passionate explorer of Machine Learning, Software Development, IoT, and Cloud Computing, I've been on a road through the vast data landscape. My knowledge, experiences, and occasional eureka moments are what I want to share with you through this blog.
+
+In the era of 'big data,' where information is power, 'What Can Data Do?' becomes the central question. It's a question that keeps data analysts and tech enthusiasts awake at night, and it's a question that drives our quest for understanding. From leveraging data to make your business more efficient to uncovering the hidden patterns in the digital world, we'll explore it all.
+
+But, 'What Can Data Do?' is not just about the 'how.' It's also about the 'why.' Why should you care about data? Why should you invest your time and energy in understanding its intricacies? Because, in data, we trust. Data is more than just numbers; it's the foundation of knowledge, the essence of decision-making, and the bridge to innovation.
+
+So, join me. Let's unravel the potential of data, discuss the latest trends, tackle complex challenges, and dive deep into the world of data science. Whether you're a seasoned data professional or just starting your data-driven adventure, this blog is your space to explore, learn, and engage.
+
+'What Can Data Do?' is not just a question. It's an invitation to explore a world where data is king, and together, we'll uncover the magic it holds.
+
+Stay tuned for regular updates, insights, and discussions. In data, we trust.
+
+Welcome!
+
+Prof. P.

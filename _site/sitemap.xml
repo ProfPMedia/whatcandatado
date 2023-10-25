@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.whatcandatado.com/posts/welcome/index.html</loc>
-    <lastmod>2023-10-25T14:52:03.100Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/about.html</loc>
-    <lastmod>2023-10-25T14:52:01.388Z</lastmod>
+    <lastmod>2023-10-25T16:06:24.713Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/index.html</loc>
-    <lastmod>2023-10-25T14:52:01.080Z</lastmod>
+    <lastmod>2023-10-25T16:06:23.621Z</lastmod>
   </url>
   <url>
-    <loc>https://www.whatcandatado.com/posts/post-with-code/index.html</loc>
-    <lastmod>2023-10-25T14:52:02.224Z</lastmod>
+    <loc>https://www.whatcandatado.com/archive.html</loc>
+    <lastmod>2023-10-25T16:06:22.329Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/doingdata-series.html</loc>
+    <lastmod>2023-10-25T16:06:23.205Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/about.html</loc>
+    <lastmod>2023-10-25T16:06:23.953Z</lastmod>
   </url>
 </urlset>
