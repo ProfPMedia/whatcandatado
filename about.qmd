@@ -13,7 +13,7 @@ about:
     - icon: github
       text: Github
       href: https://github.com/ProfPMedia
-
+comments: false
 ---
 
 Welcome to *What Can Data Do?* - a place for the data curious! Unleashing the power of data, one fascinating byte at a time.
