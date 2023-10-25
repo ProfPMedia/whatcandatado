@@ -3,16 +3,25 @@ project:
 
 website:
   title: "whatcandatado"
+  site-url: https://www.whatcandatado.com
+  description: "A place for the data curious! Unleashing the power of data, one fascinating byte at a time."
   navbar:
     right:
       - about.qmd
-      - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+      - icon: globe2
+        href: https://profpmedia.com/
+      - icon: youtube
+        href: https://www.youtube.com/@profpmedia
+      - icon: linkedin
+        href:  https://www.linkedin.com/in/lloydpalum/
+      - icon: rss
+        href: index.xml
+comments:
+  giscus:
+    repo: ProfPMedia/whatcandatado
 format:
   html:
-    theme: cosmo
+    theme: sketchy
     css: styles.css
 
 

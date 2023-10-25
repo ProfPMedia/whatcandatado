@@ -1,19 +1,25 @@
 ---
 title: "About"
-image: profile.jpg
+image: profile.png
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
+    - icon: youtube
+      text: YouTube
+      href: https://www.youtube.com/@profpmedia
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/lloydpalum/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/ProfPMedia
 
 ---
 
-About this blog
+Welcome to *What Can Data Do?* - a place for the data curious! Unleashing the power of data, one fascinating byte at a time.
+
+Hi, I'm Lloyd Palum.
+
+My students call me Prof. P., and with more than 30 years of experience in building data-intensive systems and teaching how to coax value from data at scale, I can help you crack the code and become more data-capable.
+
+Let's unlock your data's value together!
