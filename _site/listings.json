@@ -1,9 +1,8 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/doingdata-series.html",
     "items": [
-      "/posts/welcome/index.html",
-      "/posts/DoingDataWranglingRight/ddar.html",
+      "/posts/DoingDataAtScale/Introduction/index.html",
       "/posts/DoingDataAtScale/Data Intensive Applications/index.html",
       "/posts/DoingDataAtScale/Spark/index.html",
       "/posts/DoingDataAtScale/Delta Lake/index.html",
@@ -19,13 +18,17 @@
       "/posts/DoingDataAtScale/Delta Lake/index.html",
       "/posts/DoingDataAtScale/Spark/index.html",
       "/posts/DoingDataAtScale/Data Intensive Applications/index.html",
+      "/posts/DoingDataAtScale/Introduction/index.html",
       "/posts/DoingDataWranglingRight/ddar.html",
       "/posts/welcome/index.html"
     ]
   },
   {
-    "listing": "/doingdata-series.html",
+    "listing": "/index.html",
     "items": [
+      "/posts/welcome/index.html",
+      "/posts/DoingDataWranglingRight/ddar.html",
+      "/posts/DoingDataAtScale/Introduction/index.html",
       "/posts/DoingDataAtScale/Data Intensive Applications/index.html",
       "/posts/DoingDataAtScale/Spark/index.html",
       "/posts/DoingDataAtScale/Delta Lake/index.html",
