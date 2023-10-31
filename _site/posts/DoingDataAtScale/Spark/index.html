@@ -157,7 +157,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#understanding-apache-spark-a-deep-dive-into-data-driven-applications" id="toc-understanding-apache-spark-a-deep-dive-into-data-driven-applications" class="nav-link active" data-scroll-target="#understanding-apache-spark-a-deep-dive-into-data-driven-applications">Understanding Apache Spark: A Deep Dive into Data-Driven Applications</a>
+  <ul class="collapse">
+  <li><a href="#why-is-spark-important-to-data-driven-application-development" id="toc-why-is-spark-important-to-data-driven-application-development" class="nav-link" data-scroll-target="#why-is-spark-important-to-data-driven-application-development">Why is Spark Important to Data-Driven application development?</a></li>
+  <li><a href="#innovations-spark-brought-vs.-the-previous-state-of-the-art" id="toc-innovations-spark-brought-vs.-the-previous-state-of-the-art" class="nav-link" data-scroll-target="#innovations-spark-brought-vs.-the-previous-state-of-the-art">Innovations Spark Brought vs.&nbsp;The Previous State of the Art</a></li>
+  <li><a href="#main-features-of-the-spark-platform" id="toc-main-features-of-the-spark-platform" class="nav-link" data-scroll-target="#main-features-of-the-spark-platform">Main Features of the Spark Platform</a></li>
+  </ul></li>
+  <li><a href="#article-sparks-evolution-embracing-sql-and-dataframes" id="toc-article-sparks-evolution-embracing-sql-and-dataframes" class="nav-link" data-scroll-target="#article-sparks-evolution-embracing-sql-and-dataframes">Article: Spark’s Evolution: Embracing SQL and DataFrames**</a>
+  <ul class="collapse">
+  <li><a href="#introduction-to-the-update" id="toc-introduction-to-the-update" class="nav-link" data-scroll-target="#introduction-to-the-update">1. <strong>Introduction to the Update</strong></a></li>
+  <li><a href="#whats-new" id="toc-whats-new" class="nav-link" data-scroll-target="#whats-new">2. <strong>What’s New?</strong></a></li>
+  <li><a href="#improvements-over-the-previous-generation" id="toc-improvements-over-the-previous-generation" class="nav-link" data-scroll-target="#improvements-over-the-previous-generation">3. <strong>Improvements Over the Previous Generation</strong></a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">4. <strong>Conclusion</strong></a></li>
+  <li><a href="#so-how-does-this-spark-platfrom-evolution-play-out-in-code" id="toc-so-how-does-this-spark-platfrom-evolution-play-out-in-code" class="nav-link" data-scroll-target="#so-how-does-this-spark-platfrom-evolution-play-out-in-code">So how does this Spark Platfrom evolution play out in code…</a>
+  <ul class="collapse">
+  <li><a href="#using-rdds" id="toc-using-rdds" class="nav-link" data-scroll-target="#using-rdds">Using RDDs …</a></li>
+  <li><a href="#using-sql-dataframes" id="toc-using-sql-dataframes" class="nav-link" data-scroll-target="#using-sql-dataframes">Using SQL Dataframes …</a></li>
+  <li><a href="#using-the-pandas-dataframe-library" id="toc-using-the-pandas-dataframe-library" class="nav-link" data-scroll-target="#using-the-pandas-dataframe-library">Using the Pandas Dataframe Library …</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -196,11 +220,215 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption class="figure-caption">Spark</figcaption>
 </figure>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coming in the spring of 2024</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<ul>
+<li><a href="https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf">Link to the Paper: Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing</a></li>
+<li><a href="https://people.csail.mit.edu/matei/papers/2015/sigmod_spark_sql.pdf">Link to the Paper: Spark SQL: Relational Data Processing in Spark</a></li>
+<li><a href="https://spark.apache.org/docs/latest/">Apache Spark Docmentation - A Unified engine for large-scale data analytics</a></li>
+</ul>
+<section id="understanding-apache-spark-a-deep-dive-into-data-driven-applications" class="level1">
+<h1>Understanding Apache Spark: A Deep Dive into Data-Driven Applications</h1>
+<p>Apache Spark, a fast and general-purpose cluster-computing system, has become a cornerstone in big data processing. This article delves into its significance, innovations, and core features, drawing insights from the seminal paper presented at NSDI’12.</p>
+<section id="why-is-spark-important-to-data-driven-application-development" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-spark-important-to-data-driven-application-development">Why is Spark Important to Data-Driven application development?</h2>
+<ul>
+<li><p><strong>Scalability</strong>: In the era of big data, the ability to process vast amounts of data efficiently is paramount. Spark provides a platform that can scale to handle petabytes of data, making it a go-to solution for large-scale data processing.</p></li>
+<li><p><strong>Performance</strong>: Spark’s in-memory computation capabilities can process data quickly. This is especially crucial for data-driven applications where real-time or near-real-time processing is required.</p></li>
+<li><p><strong>Flexibility</strong>: Unlike some other big data processing frameworks, Spark supports batch processing, interactive queries, streaming, and machine learning, all under one roof. This versatility makes it an ideal choice for various data-driven applications.</p></li>
+</ul>
+</section>
+<section id="innovations-spark-brought-vs.-the-previous-state-of-the-art" class="level2">
+<h2 class="anchored" data-anchor-id="innovations-spark-brought-vs.-the-previous-state-of-the-art">Innovations Spark Brought vs.&nbsp;The Previous State of the Art</h2>
+<ul>
+<li><p><strong>In-Memory Computation</strong>: One of Spark’s most significant innovations is its ability to store data in memory. This contrasts with the disk-based storage approach of many earlier systems, leading to much faster data retrieval and processing times.</p></li>
+<li><p><strong>Resilient Distributed Datasets (RDDs)</strong>: RDDs are a fundamental data structure in Spark. They allow data to be distributed across a cluster and processed in parallel. RDDs are fault-tolerant, meaning they can recover from node failures, ensuring data integrity and system reliability.</p></li>
+<li><p><strong>Unified Platform</strong>: Before Spark, developers often had to use a patchwork of different tools for various big data tasks. Spark combined these capabilities into a single platform, simplifying the development process and reducing the need for multiple tools.</p></li>
+</ul>
+</section>
+<section id="main-features-of-the-spark-platform" class="level2">
+<h2 class="anchored" data-anchor-id="main-features-of-the-spark-platform">Main Features of the Spark Platform</h2>
+<ul>
+<li><p><strong>Spark Core</strong>: At the heart of Spark is its core engine, which provides the fundamental functionalities of the platform, including task scheduling, memory management, and fault recovery.</p></li>
+<li><p><strong>Spark SQL</strong>: This module allows users to execute SQL-like queries on their data, making it easier for those familiar with SQL to work with big data in Spark.</p></li>
+<li><p><strong>Spark Streaming</strong>: For applications that require real-time data processing, Spark Streaming offers the ability to process live data streams, such as those from social media or IoT devices.</p></li>
+<li><p><strong>MLlib</strong>: Machine learning is a crucial component of many data-driven applications. MLlib is Spark’s machine learning library, providing a range of algorithms and tools for data analysis and model training.</p></li>
+<li><p><strong>GraphX</strong>: For applications that deal with graph data, GraphX offers a suite of graph computation tools and algorithms.</p></li>
+</ul>
+<p>In conclusion, Apache Spark has revolutionized the world of big data processing. Its innovations and features have made it an indispensable tool for developers building data-driven applications. As data grows in volume and importance, platforms like Spark will remain at the forefront of the big data revolution.</p>
+</section>
+</section>
+<section id="article-sparks-evolution-embracing-sql-and-dataframes" class="level1">
+<h1>Article: Spark’s Evolution: Embracing SQL and DataFrames**</h1>
+<p>Apache Spark, a fast and general-purpose cluster-computing system, has been at the forefront of big data processing. Over the years, it has seen numerous updates, each aiming to make it more efficient, scalable, and user-friendly. One of the most significant updates in recent times has been the introduction of SQL and DataFrames. This article delves into the details of this update, as described in the paper by Armbrust et al.&nbsp;from MIT CSAIL.</p>
+<section id="introduction-to-the-update" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-the-update">1. <strong>Introduction to the Update</strong></h3>
+<p>Spark’s initial API was based on Resilient Distributed Datasets (RDDs). While powerful, RDDs required users to manually optimize their queries, which could be cumbersome. The new update introduces two high-level APIs: SQL and DataFrames, which aim to provide users with the ability to express computations concisely and have the system optimize them.</p>
+</section>
+<section id="whats-new" class="level3">
+<h3 class="anchored" data-anchor-id="whats-new">2. <strong>What’s New?</strong></h3>
+<ul>
+<li><p><strong>Unified Data Processing</strong>: Spark SQL provides a unified means of accessing structured data. Whether the data resides in Parquet, JSON, Hive, or other sources, users can query it seamlessly using SQL.</p></li>
+<li><p><strong>DataFrame API</strong>: Inspired by data frames in R and Python (with Pandas), Spark’s DataFrame API provides operations to filter, aggregate, and compute statistics on large datasets. It’s a distributed collection of data organized into named columns, making it easier to handle and process.</p></li>
+<li><p><strong>Optimized Execution</strong>: The Catalyst optimizer is at the heart of Spark SQL. It optimizes SQL queries as well as DataFrame operations, ensuring efficient execution. Catalyst uses advanced programming language features (like Scala’s pattern matching) to build an extensible query optimizer.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.databricks.com/wp-content/uploads/2018/05/Catalyst-Optimizer-diagram.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Catalyst Optimizer</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Interoperability</strong>: Users can seamlessly mix SQL queries with Spark programs. This means they can use RDDs, DataFrames, and SQL interchangeably, depending on the use case.</li>
+</ul>
+</section>
+<section id="improvements-over-the-previous-generation" class="level3">
+<h3 class="anchored" data-anchor-id="improvements-over-the-previous-generation">3. <strong>Improvements Over the Previous Generation</strong></h3>
+<ul>
+<li><p><strong>Performance</strong>: With the Catalyst optimizer, Spark SQL can often outperform hand-optimized Spark programs. The optimizer ensures that the system understands the computation and can make intelligent decisions about its execution.</p></li>
+<li><p><strong>Usability</strong>: For those familiar with SQL, Spark SQL offers a more intuitive way to interact with data. Even for those who aren’t, the DataFrame API provides a simpler, more expressive means of data manipulation.</p></li>
+<li><p><strong>Flexibility</strong>: The new APIs do not replace RDDs but rather complement them. Users who need the fine-grained control offered by RDDs can still use them, while also benefiting from the high-level abstractions of SQL and DataFrames.</p></li>
+<li><p><strong>Extensibility</strong>: Catalyst’s rule-based optimizer is designed to be extensible, allowing developers to add new optimization techniques without altering the core. This ensures that Spark SQL can continue to evolve and adapt to new challenges.</p></li>
+</ul>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">4. <strong>Conclusion</strong></h3>
+<p>The introduction of SQL and DataFrames in Spark marks a significant step forward in its evolution. By providing high-level abstractions, it makes big data processing more accessible to a broader audience. At the same time, with the Catalyst optimizer, it ensures that these high-level abstractions do not come at the cost of performance. As big data continues to grow in importance, tools like Spark that evolve to meet the challenges head-on will be invaluable.</p>
+</section>
+<section id="so-how-does-this-spark-platfrom-evolution-play-out-in-code" class="level2">
+<h2 class="anchored" data-anchor-id="so-how-does-this-spark-platfrom-evolution-play-out-in-code">So how does this Spark Platfrom evolution play out in code…</h2>
+<p>Consider three examples of how to count filler words in a text file to illustrate the comparison - RDD based pyspark program - SQL/Dataframe pyspark program - Dataframe Pandas program (as an example that is likely fimiliar to data science students)</p>
+<section id="using-rdds" class="level3">
+<h3 class="anchored" data-anchor-id="using-rdds">Using RDDs …</h3>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">'PYSPARK_PYTHON'</span>] <span class="op">=</span> sys.executable</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">'PYSPARK_DRIVER_PYTHON'</span>] <span class="op">=</span> sys.executable</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark <span class="im">import</span> SparkContext, SparkConf</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> string</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize Spark</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>conf <span class="op">=</span> SparkConf().setAppName(<span class="st">"FillerWordsCountRDD"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>sc <span class="op">=</span> SparkContext(conf<span class="op">=</span>conf)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define filler words</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>filler_words <span class="op">=</span> [<span class="st">"um"</span>, <span class="st">"uh"</span>, <span class="st">"like"</span>, <span class="st">"youknow"</span>, <span class="st">"so"</span>, <span class="st">"actually"</span>, <span class="st">"basically"</span>, <span class="st">"seriously"</span>]</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the text file</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>rdd <span class="op">=</span> sc.textFile(<span class="st">"example.txt"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Process and count filler words</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> (rdd.flatMap(<span class="kw">lambda</span> line: line.split(<span class="st">" "</span>))</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>          .<span class="bu">map</span>(<span class="kw">lambda</span> word: word.lower().translate(<span class="bu">str</span>.maketrans(<span class="st">''</span>, <span class="st">''</span>, string.punctuation)))</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>          .<span class="bu">filter</span>(<span class="kw">lambda</span> word: word <span class="kw">in</span> filler_words)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>          .countByValue()</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the results</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word, count <span class="kw">in</span> <span class="bu">sorted</span>(counts.items(), key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>], reverse<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>word<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>count<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Stop Spark</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>sc.stop()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>23/10/31 13:16:22 WARN Utils: Your hostname, lpalum-precision-5520 resolves to a loopback address: 127.0.1.1; using 192.168.1.172 instead (on interface wlp1s0)
+23/10/31 13:16:22 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/10/31 13:16:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+um: 3
+uh: 3
+so: 3
+like: 2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+                                                                                </code></pre>
+</div>
+</div>
+</section>
+<section id="using-sql-dataframes" class="level3">
+<h3 class="anchored" data-anchor-id="using-sql-dataframes">Using SQL Dataframes …</h3>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql <span class="im">import</span> SparkSession</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql.functions <span class="im">import</span> explode, split, lower, regexp_replace, col, udf</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql.types <span class="im">import</span> StringType</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># define a UDF for removing the punctuation</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>removePunctUDF <span class="op">=</span> udf(<span class="kw">lambda</span> x:re.sub(<span class="st">'[^A-Za-z\s\d]'</span>, <span class="st">""</span>,x),StringType()) </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize Spark</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>spark <span class="op">=</span> SparkSession.builder.appName(<span class="st">"FillerWordsCountDF"</span>).getOrCreate()</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define filler words</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>filler_words <span class="op">=</span> [<span class="st">"um"</span>, <span class="st">"uh"</span>, <span class="st">"like"</span>, <span class="st">"youknow"</span>, <span class="st">"so"</span>, <span class="st">"actually"</span>, <span class="st">"basically"</span>, <span class="st">"seriously"</span>]</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the text file into a DataFrame</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> spark.read.text(<span class="st">"example.txt"</span>).withColumn(<span class="st">"word"</span>, removePunctUDF(col(<span class="st">"value"</span>)))</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Process and count filler words</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> (df.withColumn(<span class="st">"word"</span>, explode(split(col(<span class="st">"word"</span>), <span class="st">" "</span>)))</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>           .select(lower(col(<span class="st">"word"</span>)).alias(<span class="st">"word"</span>))</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>           .<span class="bu">filter</span>(col(<span class="st">"word"</span>).isin(filler_words))</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>           .groupBy(<span class="st">"word"</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>           .count()</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>           .orderBy(<span class="st">"count"</span>, ascending<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the results</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>result.show()</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Stop Spark</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>spark.stop()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+----+-----+
+|word|count|
++----+-----+
+|  uh|    3|
+|  um|    3|
+|  so|    3|
+|like|    2|
++----+-----+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="using-the-pandas-dataframe-library" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-pandas-dataframe-library">Using the Pandas Dataframe Library …</h3>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> string</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">"example.txt"</span>, <span class="st">"r"</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.DataFrame(re.sub(<span class="st">'[^A-Za-z\s\d]'</span>, <span class="st">""</span>,f.read()).lower().split(), columns<span class="op">=</span>[<span class="st">'word'</span>])</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define filler words</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>filler_words <span class="op">=</span> [<span class="st">"um"</span>, <span class="st">"uh"</span>, <span class="st">"like"</span>, <span class="st">"youknow"</span>, <span class="st">"so"</span>, <span class="st">"actually"</span>, <span class="st">"basically"</span>, <span class="st">"seriously"</span>]</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply the function to the DataFrame</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"filler_count"</span>] <span class="op">=</span> df[<span class="st">"word"</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> w: <span class="dv">1</span> <span class="cf">if</span> w <span class="kw">in</span> filler_words <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>df.groupby(<span class="st">'word'</span>).filler_count.<span class="bu">sum</span>()[df.groupby(<span class="st">'word'</span>).filler_count.<span class="bu">sum</span>()<span class="op">&gt;</span><span class="dv">0</span>].sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>word
+so      3
+uh      3
+um      3
+like    2
+Name: filler_count, dtype: int64</code></pre>
+</div>
 </div>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
