@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -157,7 +123,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#key-features-of-mlflow" id="toc-key-features-of-mlflow" class="nav-link active" data-scroll-target="#key-features-of-mlflow">Key Features of MLflow:</a>
+  <ul class="collapse">
+  <li><a href="#problems-mlflow-solves" id="toc-problems-mlflow-solves" class="nav-link" data-scroll-target="#problems-mlflow-solves">Problems MLflow Solves:</a></li>
+  <li><a href="#significance-of-mlflow" id="toc-significance-of-mlflow" class="nav-link" data-scroll-target="#significance-of-mlflow">Significance of MLflow:</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -197,11 +173,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption class="figure-caption">MLflow</figcaption>
 </figure>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coming in the spring of 2024</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<hr>
+<ul>
+<li><a href="http://sites.computer.org/debull/A18dec/p39.pdf">Accelerating the Machine Learning Lifecycle with MLflow</a></li>
+<li><a href="https://mlflow.org/docs/latest/index.html">mlflow documentation</a></li>
+</ul>
+<section id="key-features-of-mlflow" class="level2">
+<h2 class="anchored" data-anchor-id="key-features-of-mlflow">Key Features of MLflow:</h2>
+<ol type="1">
+<li><p><strong>Open Interface Design</strong>: MLflow is designed with an open interface, allowing data scientists and engineers to bring their own training code, metrics, and inference logic while benefiting from a structured development process.</p></li>
+<li><p><strong>Three Main Components</strong>:</p>
+<ul>
+<li><strong>MLflow Tracking</strong>: An API for recording experiment runs, including code used, parameters, input data, metrics, and arbitrary output files. This helps in keeping track of various experiments and their results.</li>
+<li><strong>MLflow Projects</strong>: A format for packaging code into reusable projects. Each project defines its environment, the code to run, and parameters. It ensures reproducibility by packaging the entire environment and dependencies.</li>
+<li><strong>MLflow Models</strong>: A generic format for packaging machine learning models in multiple formats, allowing diverse tools to understand the model at different levels of abstraction. It supports various deployment tools like batch, real-time inference, and cloud platforms.</li>
+</ul></li>
+<li><p><strong>Experiment Tracking</strong>: MLflow provides a UI for tracking and visualizing experiments, allowing users to organize, search, sort, and compare runs.</p></li>
+<li><p><strong>Reproducibility</strong>: MLflow Projects ensure that the same environment and dependencies are used, making it easy to reproduce results.</p></li>
+<li><p><strong>Model Packaging</strong>: MLflow Models allow for the packaging of both the model and any custom logic, ensuring that they can be deployed and tested as a single unit.</p></li>
+</ol>
+<section id="problems-mlflow-solves" class="level3">
+<h3 class="anchored" data-anchor-id="problems-mlflow-solves">Problems MLflow Solves:</h3>
+<ol type="1">
+<li><p><strong>Multitude of Tools</strong>: MLflow addresses the challenge of using multiple tools at each phase of ML development.</p></li>
+<li><p><strong>Experiment Tracking</strong>: It provides a solution for tracking which parameters, code, and data went into each experiment.</p></li>
+<li><p><strong>Reproducibility</strong>: MLflow ensures that results can be reproduced, addressing challenges in getting the same code to work consistently.</p></li>
+<li><p><strong>Production Deployment</strong>: It simplifies the process of moving an application to production, ensuring that models are deployed reliably.</p></li>
+</ol>
+</section>
+<section id="significance-of-mlflow" class="level3">
+<h3 class="anchored" data-anchor-id="significance-of-mlflow">Significance of MLflow:</h3>
+<ol type="1">
+<li><p><strong>Flexibility</strong>: Unlike other platforms that restrict users to specific algorithms or libraries, MLflow’s open interface design provides flexibility while retaining the benefits of lifecycle management.</p></li>
+<li><p><strong>Structured ML Lifecycle</strong>: MLflow structures the machine learning lifecycle, ensuring reproducibility, deployability, and a standardized development process.</p></li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

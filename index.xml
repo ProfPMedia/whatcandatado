@@ -52,13 +52,44 @@ font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre><
 <figcaption class="figure-caption">MLflow</figcaption>
 </figure>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre></div>
-</div>
+<hr>
+<ul>
+<li><a href="http://sites.computer.org/debull/A18dec/p39.pdf">Accelerating the Machine Learning Lifecycle with MLflow</a></li>
+<li><a href="https://mlflow.org/docs/latest/index.html">mlflow documentation</a></li>
+</ul>
+<section id="key-features-of-mlflow" class="level2">
+<h2 class="anchored" data-anchor-id="key-features-of-mlflow">Key Features of MLflow:</h2>
+<ol type="1">
+<li><p><strong>Open Interface Design</strong>: MLflow is designed with an open interface, allowing data scientists and engineers to bring their own training code, metrics, and inference logic while benefiting from a structured development process.</p></li>
+<li><p><strong>Three Main Components</strong>:</p>
+<ul>
+<li><strong>MLflow Tracking</strong>: An API for recording experiment runs, including code used, parameters, input data, metrics, and arbitrary output files. This helps in keeping track of various experiments and their results.</li>
+<li><strong>MLflow Projects</strong>: A format for packaging code into reusable projects. Each project defines its environment, the code to run, and parameters. It ensures reproducibility by packaging the entire environment and dependencies.</li>
+<li><strong>MLflow Models</strong>: A generic format for packaging machine learning models in multiple formats, allowing diverse tools to understand the model at different levels of abstraction. It supports various deployment tools like batch, real-time inference, and cloud platforms.</li>
+</ul></li>
+<li><p><strong>Experiment Tracking</strong>: MLflow provides a UI for tracking and visualizing experiments, allowing users to organize, search, sort, and compare runs.</p></li>
+<li><p><strong>Reproducibility</strong>: MLflow Projects ensure that the same environment and dependencies are used, making it easy to reproduce results.</p></li>
+<li><p><strong>Model Packaging</strong>: MLflow Models allow for the packaging of both the model and any custom logic, ensuring that they can be deployed and tested as a single unit.</p></li>
+</ol>
+<section id="problems-mlflow-solves" class="level3">
+<h3 class="anchored" data-anchor-id="problems-mlflow-solves">Problems MLflow Solves:</h3>
+<ol type="1">
+<li><p><strong>Multitude of Tools</strong>: MLflow addresses the challenge of using multiple tools at each phase of ML development.</p></li>
+<li><p><strong>Experiment Tracking</strong>: It provides a solution for tracking which parameters, code, and data went into each experiment.</p></li>
+<li><p><strong>Reproducibility</strong>: MLflow ensures that results can be reproduced, addressing challenges in getting the same code to work consistently.</p></li>
+<li><p><strong>Production Deployment</strong>: It simplifies the process of moving an application to production, ensuring that models are deployed reliably.</p></li>
+</ol>
+</section>
+<section id="significance-of-mlflow" class="level3">
+<h3 class="anchored" data-anchor-id="significance-of-mlflow">Significance of MLflow:</h3>
+<ol type="1">
+<li><p><strong>Flexibility</strong>: Unlike other platforms that restrict users to specific algorithms or libraries, MLflow’s open interface design provides flexibility while retaining the benefits of lifecycle management.</p></li>
+<li><p><strong>Structured ML Lifecycle</strong>: MLflow structures the machine learning lifecycle, ensuring reproducibility, deployability, and a standardized development process.</p></li>
+</ol>
 
 
+</section>
+</section>
 
  ]]></description>
   <category>MLflow</category>
@@ -81,13 +112,455 @@ font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre><
 <figcaption class="figure-caption">Delta Lake</figcaption>
 </figure>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<hr>
+<ul>
+<li><a href="https://www.vldb.org/pvldb/vol13/p3411-armbrust.pdf">Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores</a></li>
+<li><a href="https://docs.delta.io/latest/index.html">Delta Lake Documentation</a></li>
+</ul>
+<section id="key-features-of-delta-lake" class="level2">
+<h2 class="anchored" data-anchor-id="key-features-of-delta-lake">Key Features of Delta Lake:</h2>
+<ol type="1">
+<li><strong>ACID Transactions</strong>: Delta Lake provides full ACID transactional capabilities, ensuring data integrity and consistency.</li>
+<li><strong>Scalable Metadata Handling</strong>: It uses a unique approach to handle metadata, allowing it to scale to billions of partitions and trillions of files.</li>
+<li><strong>Unified Batch and Streaming</strong>: Delta Lake supports both batch and streaming workloads with a unified experience.</li>
+<li><strong>Schema Evolution</strong>: It allows for schema-on-read and schema-on-write, enabling users to evolve their datasets over time.</li>
+<li><strong>Audit History</strong>: Delta Lake maintains a detailed audit trail of all changes, allowing for versioning and time-travel capabilities.</li>
+<li><strong>Support for Deletes, Updates, and Merges</strong>: Delta Lake supports operations like DELETE, UPDATE, and MERGE INTO, which are typically not available in most data lakes.</li>
+</ol>
+</section>
+<section id="problems-delta-lake-solves" class="level2">
+<h2 class="anchored" data-anchor-id="problems-delta-lake-solves">Problems Delta Lake Solves:</h2>
+<ol type="1">
+<li><strong>Data Reliability</strong>: Traditional data lakes often suffer from issues like data corruption, missing files, or duplicate data. Delta Lake’s ACID transactions eliminate these problems.</li>
+<li><strong>Performance</strong>: By leveraging Spark’s capabilities and optimizing storage layer operations, Delta Lake provides faster query performance.</li>
+<li><strong>Complex ETL Workflows</strong>: Delta Lake simplifies ETL workflows by supporting operations like upserts and deletes.</li>
+<li><strong>Metadata Scalability</strong>: Handling metadata for large datasets can be challenging. Delta Lake’s approach to metadata ensures scalability and performance.</li>
+</ol>
+</section>
+<section id="significance-of-delta-lake-in-the-data-stack" class="level2">
+<h2 class="anchored" data-anchor-id="significance-of-delta-lake-in-the-data-stack">Significance of Delta Lake in the Data Stack:</h2>
+<ol type="1">
+<li><strong>Enhanced Data Reliability</strong>: By providing ACID transactions, Delta Lake ensures that the data is reliable and consistent, which is crucial for analytical workloads.</li>
+<li><strong>Flexibility</strong>: With support for schema evolution and a wide range of operations, Delta Lake offers flexibility in managing and processing data.</li>
+<li><strong>Integration with Existing Tools</strong>: Delta Lake seamlessly integrates with existing tools and frameworks, ensuring that organizations can adopt it without significant changes to their existing infrastructure.</li>
+</ol>
+</section>
+<section id="integration-with-spark" class="level2">
+<h2 class="anchored" data-anchor-id="integration-with-spark">Integration with Spark:</h2>
+<ol type="1">
+<li><strong>Native Integration</strong>: Delta Lake is built on top of Spark, ensuring native integration and optimization.</li>
+<li><strong>Optimized Query Execution</strong>: Delta Lake leverages Spark’s Catalyst optimizer for efficient query execution.</li>
+<li><strong>Use of Spark APIs</strong>: Users can utilize familiar Spark APIs to read and write data in Delta Lake, ensuring a smooth user experience.</li>
+</ol>
+<p>Delta Lake is a significant addition to the data stack as it addresses many of the challenges faced by traditional data lakes. By providing ACID transactions, scalable metadata handling, and a range of operations, Delta Lake ensures that data is reliable, consistent, and easily accessible. Its deep integration with Spark further enhances its capabilities, making it a powerful tool for data processing and analytics.</p>
+<p>ACID is an acronym that stands for Atomicity, Consistency, Isolation, and Durability. These are a set of properties that ensure reliable processing of database transactions. Let’s delve into each of these properties:</p>
+<section id="atomicity" class="level3">
+<h3 class="anchored" data-anchor-id="atomicity">1. Atomicity:</h3>
+<p><strong>Definition</strong>: Atomicity ensures that a transaction is treated as a single, indivisible unit, which means either all of its operations are executed or none of them are. If a transaction is interrupted (for example, due to a system crash or power failure), any changes that it made are rolled back to ensure the database remains in a consistent state.</p>
+<p><strong>Example</strong>: Consider a banking application where you are transferring money from one account to another. This transaction involves two operations: - Deducting the amount from the source account. - Adding the amount to the destination account.</p>
+<p>If the system fails after deducting the amount but before adding it to the destination account, atomicity ensures that the deducted amount is rolled back to the source account, ensuring no money is lost.</p>
+</section>
+<section id="consistency" class="level3">
+<h3 class="anchored" data-anchor-id="consistency">2. Consistency:</h3>
+<p><strong>Definition</strong>: Consistency ensures that a transaction brings the database from one valid state to another. After a transaction has been committed, the changes are permanent, and the database will be left in a consistent state. Any transaction that would violate the database’s consistency rules is rolled back.</p>
+<p><strong>Example</strong>: In the same banking application, suppose there’s a rule that an account balance should never go below $100. If a transaction tries to withdraw an amount that would violate this rule, the transaction would be rolled back, ensuring the database remains consistent.</p>
+</section>
+<section id="isolation" class="level3">
+<h3 class="anchored" data-anchor-id="isolation">3. Isolation:</h3>
+<p><strong>Definition</strong>: Isolation ensures that concurrent transactions are executed in such a way that the results are the same as if the transactions were executed serially, one after the other. This means that the intermediate state of a transaction is invisible to other transactions.</p>
+<p><strong>Example</strong>: Imagine two transactions: - Transaction A reads a value and increases it by $10. - Transaction B reads the same value simultaneously and increases it by $20.</p>
+<p>If these transactions are not isolated, they might both read the same initial value, say $100, and update it to $110 and $120, respectively. With proper isolation, the final value would be $130, as one transaction would wait for the other to complete before reading the updated value.</p>
+</section>
+<section id="durability" class="level3">
+<h3 class="anchored" data-anchor-id="durability">4. Durability:</h3>
+<p><strong>Definition</strong>: Durability ensures that once a transaction has been committed, its effects are permanent, even in the case of system failures. This is typically achieved by storing transaction logs or using backup mechanisms.</p>
+<p><strong>Example</strong>: After completing a purchase in an online store, the transaction details are written to the database. Even if the system crashes immediately after, durability ensures that the transaction details are not lost and can be recovered when the system restarts.</p>
+<p>ACID properties are fundamental to ensuring the reliability and robustness of database systems. They ensure that the data remains consistent and intact even in the face of system failures or concurrent access.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre></div>
+font-style: inherit;">import</span> pyspark</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> delta <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span></span>
+<span id="cb1-3">builder <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (</span>
+<span id="cb1-4">    pyspark.sql.SparkSession.builder.appName(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"MyApp"</span>)</span>
+<span id="cb1-5">    .config(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"spark.sql.extensions"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"io.delta.sql.DeltaSparkSessionExtension"</span>)</span>
+<span id="cb1-6">    .config(</span>
+<span id="cb1-7">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"spark.sql.catalog.spark_catalog"</span>,</span>
+<span id="cb1-8">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"org.apache.spark.sql.delta.catalog.DeltaCatalog"</span>,</span>
+<span id="cb1-9">    )</span>
+<span id="cb1-10">)</span>
+<span id="cb1-11">spark <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> configure_spark_with_delta_pip(builder).getOrCreate()</span></code></pre></div>
+</div>
+</section>
+</section>
+<section id="create-a-delta-table" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-delta-table">Create a Delta Table</h2>
+<ul>
+<li>Underlying format uses columnar Parquet Files</li>
+<li>JSON delta log is used by the delta lake transactional core software</li>
+</ul>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> spark.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb2-2">data.write.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"delta"</span>).save(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./delta-table"</span>, OVERWRITE<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>ls delta<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>table<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>_delta_log
+part-00000-aa7ed3d3-662a-46cf-b94f-f90235a78d46-c000.snappy.parquet
+part-00001-c57f57a0-c72a-43ad-8529-a37859acd44f-c000.snappy.parquet
+part-00002-50f9305f-41cc-43e6-b532-7f4c50233b3f-c000.snappy.parquet
+part-00003-19ed009f-69d1-49ce-86f1-312cb074b6a3-c000.snappy.parquet</code></pre>
+</div>
+</div>
+</section>
+<section id="read-the-delta-table" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-delta-table">Read the delta Table</h2>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1">df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> spark.read.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"delta"</span>).load(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./delta-table"</span>)</span>
+<span id="cb6-2">df.show()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  3|
+|  4|
+|  2|
+|  0|
+|  1|
++---+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="update-table---overwrite" class="level2">
+<h2 class="anchored" data-anchor-id="update-table---overwrite">Update table - overwrite</h2>
+<div class="cell" data-tags="[]" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> spark.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span>
+<span id="cb8-2">data.write.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"delta"</span>).mode(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"overwrite"</span>).save(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./delta-table"</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1">df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> spark.read.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"delta"</span>).load(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./delta-table"</span>)</span>
+<span id="cb10-2">df.show()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  8|
+|  9|
+|  5|
+|  6|
+|  7|
++---+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="conditional-update-without-overwrite" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-update-without-overwrite">Conditional update without overwrite</h2>
+<div class="cell" data-tags="[]" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> delta.tables <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span></span>
+<span id="cb12-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> pyspark.sql.functions <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span></span></code></pre></div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1">deltaTable <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> DeltaTable.forPath(spark, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./delta-table"</span>)</span></code></pre></div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Update every even value by adding 100 to it</span></span>
+<span id="cb14-2">deltaTable.update(condition<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>expr(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"id % 2 == 0"</span>), <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">set</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"id"</span>: expr(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"id + 100"</span>)})</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1">deltaTable.toDF().show()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|108|
+|  9|
+|  5|
+|  7|
+|106|
++---+
+</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Delete every even value</span></span>
+<span id="cb18-2">deltaTable.delete(condition<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>expr(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"id % 2 == 0"</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1">deltaTable.toDF().show()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  9|
+|  5|
+|  7|
++---+
+</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Upsert (merge) new data</span></span>
+<span id="cb22-2">newData <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> spark.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>)</span>
+<span id="cb22-3"></span>
+<span id="cb22-4">deltaTable.alias(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"oldData"</span>).merge(</span>
+<span id="cb22-5">    newData.alias(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"newData"</span>), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"oldData.id = newData.id"</span></span>
+<span id="cb22-6">).whenMatchedUpdate(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">set</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"id"</span>: col(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"newData.id"</span>)}).whenNotMatchedInsert(</span>
+<span id="cb22-7">    values<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>{<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"id"</span>: col(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"newData.id"</span>)}</span>
+<span id="cb22-8">).execute()</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1">deltaTable.toDF().show()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  0|
+|  1|
+|  2|
+|  3|
+|  4|
+|  5|
+|  6|
+|  7|
+|  8|
+|  9|
+| 10|
+| 11|
+| 12|
+| 13|
+| 14|
+| 15|
+| 16|
+| 17|
+| 18|
+| 19|
++---+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="read-older-versions-of-data-using-time-travel" class="level2">
+<h2 class="anchored" data-anchor-id="read-older-versions-of-data-using-time-travel">Read older versions of data using time travel</h2>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1">df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> spark.read.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">format</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"delta"</span>).option(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"versionAsOf"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>).load(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"./delta-table"</span>)</span>
+<span id="cb26-2">df.show()</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  3|
+|  4|
+|  2|
+|  0|
+|  1|
++---+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="looking-at-the-underlying-transaction-log-maintained-by-delta-lake" class="level2">
+<h2 class="anchored" data-anchor-id="looking-at-the-underlying-transaction-log-maintained-by-delta-lake">Looking at the underlying transaction log maintained by Delta Lake</h2>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>cat .<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>delta<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>table<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>_delta_log<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">00000000000000000003.j</span><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">son</span></span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{"remove":{"path":"part-00000-ad39a0c3-57cd-4b19-bd34-c1322d1f026e-c000.snappy.parquet","deletionTimestamp":1698778757438,"dataChange":true,"extendedFileMetadata":true,"partitionValues":{},"size":486}}
+{"remove":{"path":"part-00001-a61ba60f-f4eb-40c1-ab50-88fa3600e94a-c000.snappy.parquet","deletionTimestamp":1698778757438,"dataChange":true,"extendedFileMetadata":true,"partitionValues":{},"size":478}}
+{"add":{"path":"part-00000-dbf8c991-8a1a-42b4-9b3e-93dcb13801fa-c000.snappy.parquet","partitionValues":{},"size":478,"modificationTime":1698778757430,"dataChange":true,"stats":"{\"numRecords\":1,\"minValues\":{\"id\":9},\"maxValues\":{\"id\":9},\"nullCount\":{\"id\":0}}"}}
+{"commitInfo":{"timestamp":1698778757453,"operation":"DELETE","operationParameters":{"predicate":"[\"((id % 2L) = 0L)\"]"},"readVersion":2,"isolationLevel":"Serializable","isBlindAppend":false,"operationMetrics":{"numRemovedFiles":"2","numCopiedRows":"1","numAddedChangeFiles":"0","executionTimeMs":"899","numDeletedRows":"2","scanTimeMs":"722","numAddedFiles":"1","rewriteTimeMs":"177"},"engineInfo":"Apache-Spark/3.3.1 Delta-Lake/2.1.0","txnId":"951deaaf-e06b-464a-bbf1-a2e6bc62efb7"}}</code></pre>
+</div>
 </div>
 
 
+</section>
 
  ]]></description>
   <category>DeltaLake</category>
@@ -109,13 +582,503 @@ font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre><
 <figcaption class="figure-caption">Spark</figcaption>
 </figure>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<hr>
+<ul>
+<li><a href="https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf">Link to the Paper: Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing</a></li>
+<li><a href="https://people.csail.mit.edu/matei/papers/2015/sigmod_spark_sql.pdf">Link to the Paper: Spark SQL: Relational Data Processing in Spark</a></li>
+<li><a href="https://spark.apache.org/docs/latest/">Apache Spark Docmentation - A Unified engine for large-scale data analytics</a></li>
+</ul>
+<section id="understanding-apache-spark-a-deep-dive-into-data-driven-applications" class="level1">
+<h1>Understanding Apache Spark: A Deep Dive into Data-Driven Applications</h1>
+<p>Apache Spark, a fast and general-purpose cluster-computing system, has become a cornerstone in big data processing. This article delves into its significance, innovations, and core features, drawing insights from the seminal paper presented at NSDI’12.</p>
+<section id="why-is-spark-important-to-data-driven-application-development" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-spark-important-to-data-driven-application-development">Why is Spark Important to Data-Driven application development?</h2>
+<ul>
+<li><p><strong>Scalability</strong>: In the era of big data, the ability to process vast amounts of data efficiently is paramount. Spark provides a platform that can scale to handle petabytes of data, making it a go-to solution for large-scale data processing.</p></li>
+<li><p><strong>Performance</strong>: Spark’s in-memory computation capabilities can process data quickly. This is especially crucial for data-driven applications where real-time or near-real-time processing is required.</p></li>
+<li><p><strong>Flexibility</strong>: Unlike some other big data processing frameworks, Spark supports batch processing, interactive queries, streaming, and machine learning, all under one roof. This versatility makes it an ideal choice for various data-driven applications.</p></li>
+</ul>
+</section>
+<section id="innovations-spark-brought-vs.-the-previous-state-of-the-art" class="level2">
+<h2 class="anchored" data-anchor-id="innovations-spark-brought-vs.-the-previous-state-of-the-art">Innovations Spark Brought vs.&nbsp;The Previous State of the Art</h2>
+<ul>
+<li><p><strong>In-Memory Computation</strong>: One of Spark’s most significant innovations is its ability to store data in memory. This contrasts with the disk-based storage approach of many earlier systems, leading to much faster data retrieval and processing times.</p></li>
+<li><p><strong>Resilient Distributed Datasets (RDDs)</strong>: RDDs are a fundamental data structure in Spark. They allow data to be distributed across a cluster and processed in parallel. RDDs are fault-tolerant, meaning they can recover from node failures, ensuring data integrity and system reliability.</p></li>
+<li><p><strong>Unified Platform</strong>: Before Spark, developers often had to use a patchwork of different tools for various big data tasks. Spark combined these capabilities into a single platform, simplifying the development process and reducing the need for multiple tools.</p></li>
+</ul>
+</section>
+<section id="main-features-of-the-spark-platform" class="level2">
+<h2 class="anchored" data-anchor-id="main-features-of-the-spark-platform">Main Features of the Spark Platform</h2>
+<ul>
+<li><p><strong>Spark Core</strong>: At the heart of Spark is its core engine, which provides the fundamental functionalities of the platform, including task scheduling, memory management, and fault recovery.</p></li>
+<li><p><strong>Spark SQL</strong>: This module allows users to execute SQL-like queries on their data, making it easier for those familiar with SQL to work with big data in Spark.</p></li>
+<li><p><strong>Spark Streaming</strong>: For applications that require real-time data processing, Spark Streaming offers the ability to process live data streams, such as those from social media or IoT devices.</p></li>
+<li><p><strong>MLlib</strong>: Machine learning is a crucial component of many data-driven applications. MLlib is Spark’s machine learning library, providing a range of algorithms and tools for data analysis and model training.</p></li>
+<li><p><strong>GraphX</strong>: For applications that deal with graph data, GraphX offers a suite of graph computation tools and algorithms.</p></li>
+</ul>
+<p>In conclusion, Apache Spark has revolutionized the world of big data processing. Its innovations and features have made it an indispensable tool for developers building data-driven applications. As data grows in volume and importance, platforms like Spark will remain at the forefront of the big data revolution.</p>
+</section>
+</section>
+<section id="article-sparks-evolution-embracing-sql-and-dataframes" class="level1">
+<h1>Article: Spark’s Evolution: Embracing SQL and DataFrames**</h1>
+<p>Apache Spark, a fast and general-purpose cluster-computing system, has been at the forefront of big data processing. Over the years, it has seen numerous updates, each aiming to make it more efficient, scalable, and user-friendly. One of the most significant updates in recent times has been the introduction of SQL and DataFrames. This article delves into the details of this update, as described in the paper by Armbrust et al.&nbsp;from MIT CSAIL.</p>
+<section id="introduction-to-the-update" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-the-update">1. <strong>Introduction to the Update</strong></h3>
+<p>Spark’s initial API was based on Resilient Distributed Datasets (RDDs). While powerful, RDDs required users to manually optimize their queries, which could be cumbersome. The new update introduces two high-level APIs: SQL and DataFrames, which aim to provide users with the ability to express computations concisely and have the system optimize them.</p>
+</section>
+<section id="whats-new" class="level3">
+<h3 class="anchored" data-anchor-id="whats-new">2. <strong>What’s New?</strong></h3>
+<ul>
+<li><p><strong>Unified Data Processing</strong>: Spark SQL provides a unified means of accessing structured data. Whether the data resides in Parquet, JSON, Hive, or other sources, users can query it seamlessly using SQL.</p></li>
+<li><p><strong>DataFrame API</strong>: Inspired by data frames in R and Python (with Pandas), Spark’s DataFrame API provides operations to filter, aggregate, and compute statistics on large datasets. It’s a distributed collection of data organized into named columns, making it easier to handle and process.</p></li>
+<li><p><strong>Optimized Execution</strong>: The Catalyst optimizer is at the heart of Spark SQL. It optimizes SQL queries as well as DataFrame operations, ensuring efficient execution. Catalyst uses advanced programming language features (like Scala’s pattern matching) to build an extensible query optimizer.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.whatcandatado.com/posts/DoingDataAtScale/Spark/https:/www.databricks.com/wp-content/uploads/2018/05/Catalyst-Optimizer-diagram.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Catalyst Optimizer</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Interoperability</strong>: Users can seamlessly mix SQL queries with Spark programs. This means they can use RDDs, DataFrames, and SQL interchangeably, depending on the use case.</li>
+</ul>
+</section>
+<section id="improvements-over-the-previous-generation" class="level3">
+<h3 class="anchored" data-anchor-id="improvements-over-the-previous-generation">3. <strong>Improvements Over the Previous Generation</strong></h3>
+<ul>
+<li><p><strong>Performance</strong>: With the Catalyst optimizer, Spark SQL can often outperform hand-optimized Spark programs. The optimizer ensures that the system understands the computation and can make intelligent decisions about its execution.</p></li>
+<li><p><strong>Usability</strong>: For those familiar with SQL, Spark SQL offers a more intuitive way to interact with data. Even for those who aren’t, the DataFrame API provides a simpler, more expressive means of data manipulation.</p></li>
+<li><p><strong>Flexibility</strong>: The new APIs do not replace RDDs but rather complement them. Users who need the fine-grained control offered by RDDs can still use them, while also benefiting from the high-level abstractions of SQL and DataFrames.</p></li>
+<li><p><strong>Extensibility</strong>: Catalyst’s rule-based optimizer is designed to be extensible, allowing developers to add new optimization techniques without altering the core. This ensures that Spark SQL can continue to evolve and adapt to new challenges.</p></li>
+</ul>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">4. <strong>Conclusion</strong></h3>
+<p>The introduction of SQL and DataFrames in Spark marks a significant step forward in its evolution. By providing high-level abstractions, it makes big data processing more accessible to a broader audience. At the same time, with the Catalyst optimizer, it ensures that these high-level abstractions do not come at the cost of performance. As big data continues to grow in importance, tools like Spark that evolve to meet the challenges head-on will be invaluable.</p>
+</section>
+<section id="so-how-does-this-spark-platfrom-evolution-play-out-in-code" class="level2">
+<h2 class="anchored" data-anchor-id="so-how-does-this-spark-platfrom-evolution-play-out-in-code">So how does this Spark Platfrom evolution play out in code…</h2>
+<p>Consider three examples of how to count filler words in a text file to illustrate the comparison - RDD based pyspark program - SQL/Dataframe pyspark program - Dataframe Pandas program (as an example that is likely fimiliar to data science students)</p>
+<section id="using-rdds" class="level3">
+<h3 class="anchored" data-anchor-id="using-rdds">Using RDDs …</h3>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre></div>
+font-style: inherit;">import</span> os</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> sys</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">os.environ[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'PYSPARK_PYTHON'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sys.executable</span>
+<span id="cb1-5">os.environ[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'PYSPARK_DRIVER_PYTHON'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sys.executable</span></code></pre></div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> pyspark <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> SparkContext, SparkConf</span>
+<span id="cb2-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> string</span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Initialize Spark</span></span>
+<span id="cb2-5">conf <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> SparkConf().setAppName(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FillerWordsCountRDD"</span>)</span>
+<span id="cb2-6">sc <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> SparkContext(conf<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>conf)</span>
+<span id="cb2-7"></span>
+<span id="cb2-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define filler words</span></span>
+<span id="cb2-9">filler_words <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"um"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"uh"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"like"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"youknow"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"so"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"actually"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"basically"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"seriously"</span>]</span>
+<span id="cb2-10"></span>
+<span id="cb2-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Read the text file</span></span>
+<span id="cb2-12">rdd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sc.textFile(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"example.txt"</span>)</span>
+<span id="cb2-13"></span>
+<span id="cb2-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Process and count filler words</span></span>
+<span id="cb2-15">counts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (rdd.flatMap(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span> line: line.split(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>))</span>
+<span id="cb2-16">          .<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">map</span>(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span> word: word.lower().translate(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">str</span>.maketrans(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">''</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">''</span>, string.punctuation)))</span>
+<span id="cb2-17">          .<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span> word: word <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> filler_words)</span>
+<span id="cb2-18">          .countByValue()</span>
+<span id="cb2-19">          )</span>
+<span id="cb2-20"></span>
+<span id="cb2-21"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Print the results</span></span>
+<span id="cb2-22"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> word, count <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sorted</span>(counts.items(), key<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span> x: x[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>], reverse<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>):</span>
+<span id="cb2-23">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>word<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>count<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb2-24"></span>
+<span id="cb2-25"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Stop Spark</span></span>
+<span id="cb2-26">sc.stop()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>23/10/31 13:16:22 WARN Utils: Your hostname, lpalum-precision-5520 resolves to a loopback address: 127.0.1.1; using 192.168.1.172 instead (on interface wlp1s0)
+23/10/31 13:16:22 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+23/10/31 13:16:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+um: 3
+uh: 3
+so: 3
+like: 2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+                                                                                </code></pre>
+</div>
+</div>
+</section>
+<section id="using-sql-dataframes" class="level3">
+<h3 class="anchored" data-anchor-id="using-sql-dataframes">Using SQL Dataframes …</h3>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> pyspark.sql <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> SparkSession</span>
+<span id="cb5-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> pyspark.sql.functions <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> explode, split, lower, regexp_replace, col, udf</span>
+<span id="cb5-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> pyspark.sql.types <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> StringType</span>
+<span id="cb5-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> re</span>
+<span id="cb5-5"></span>
+<span id="cb5-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># define a UDF for removing the punctuation</span></span>
+<span id="cb5-7">removePunctUDF <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> udf(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span> x:re.sub(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'[^A-Za-z\s\d]'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>,x),StringType()) </span>
+<span id="cb5-8"></span>
+<span id="cb5-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Initialize Spark</span></span>
+<span id="cb5-10">spark <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> SparkSession.builder.appName(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FillerWordsCountDF"</span>).getOrCreate()</span>
+<span id="cb5-11"></span>
+<span id="cb5-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define filler words</span></span>
+<span id="cb5-13">filler_words <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"um"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"uh"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"like"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"youknow"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"so"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"actually"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"basically"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"seriously"</span>]</span>
+<span id="cb5-14"></span>
+<span id="cb5-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Read the text file into a DataFrame</span></span>
+<span id="cb5-16">df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> spark.read.text(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"example.txt"</span>).withColumn(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>, removePunctUDF(col(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"value"</span>)))</span>
+<span id="cb5-17"></span>
+<span id="cb5-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Process and count filler words</span></span>
+<span id="cb5-19">result <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (df.withColumn(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>, explode(split(col(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span>)))</span>
+<span id="cb5-20">           .select(lower(col(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>)).alias(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>))</span>
+<span id="cb5-21">           .<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">filter</span>(col(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>).isin(filler_words))</span>
+<span id="cb5-22">           .groupBy(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>)</span>
+<span id="cb5-23">           .count()</span>
+<span id="cb5-24">           .orderBy(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"count"</span>, ascending<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>))</span>
+<span id="cb5-25"></span>
+<span id="cb5-26"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Show the results</span></span>
+<span id="cb5-27">result.show()</span>
+<span id="cb5-28"></span>
+<span id="cb5-29"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Stop Spark</span></span>
+<span id="cb5-30">spark.stop()</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+----+-----+
+|word|count|
++----+-----+
+|  uh|    3|
+|  um|    3|
+|  so|    3|
+|like|    2|
++----+-----+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="using-the-pandas-dataframe-library" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-pandas-dataframe-library">Using the Pandas Dataframe Library …</h3>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb8-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> string</span>
+<span id="cb8-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> re</span>
+<span id="cb8-4"></span>
+<span id="cb8-5">f <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">open</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"example.txt"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"r"</span>)</span>
+<span id="cb8-6">df<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>pd.DataFrame(re.sub(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'[^A-Za-z\s\d]'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>,f.read()).lower().split(), columns<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'word'</span>])</span>
+<span id="cb8-7"></span>
+<span id="cb8-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define filler words</span></span>
+<span id="cb8-9">filler_words <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"um"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"uh"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"like"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"youknow"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"so"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"actually"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"basically"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"seriously"</span>]</span>
+<span id="cb8-10"></span>
+<span id="cb8-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Apply the function to the DataFrame</span></span>
+<span id="cb8-12">df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"filler_count"</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"word"</span>].<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">apply</span>(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">lambda</span> w: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> w <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> filler_words <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb8-13"></span>
+<span id="cb8-14">df.groupby(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'word'</span>).filler_count.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>()[df.groupby(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'word'</span>).filler_count.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>()<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>].sort_values(ascending<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>word
+so      3
+uh      3
+um      3
+like    2
+Name: filler_count, dtype: int64</code></pre>
+</div>
 </div>
 
 
+</section>
+</section>
+</section>
 
  ]]></description>
   <category>Spark</category>
@@ -260,9 +1223,29 @@ font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre><
 <p>The lecture showcases a video that further elaborates on the features and benefits of the True Fuel Network. The video emphasizes the importance of real-time coaching, driver feedback mechanisms, and the potential savings that can be achieved through optimized fuel consumption.</p>
 <p>In essence, the Vnomics True Fuel Network serves as a testament to the transformative potential of data-intensive applications in the trucking industry. By leveraging data and technology, the industry can achieve significant savings, reduce its environmental footprint, and enhance operational efficiency.</p>
 </section>
+<section id="steps-to-applied-ai---a-roadmap-for-every-machine-learning-project" class="level3">
+<h3 class="anchored" data-anchor-id="steps-to-applied-ai---a-roadmap-for-every-machine-learning-project"><a href="https://medium.com/swlh/12-steps-to-applied-ai-2fdad7fdcdf3">12 Steps to Applied AI - A roadmap for every machine learning project</a></h3>
+<p>The article titled “12 Steps to Applied AI” provides a comprehensive roadmap for executing machine learning and artificial intelligence projects. The author emphasizes the importance of following a structured approach to ensure the success of such projects. Here’s a summarized breakdown of the 12 steps:</p>
+<ol type="1">
+<li><strong>Reality Check and Setup</strong>: Before diving into ML/AI, ensure that there’s a genuine need for it. Verify that you have the necessary data and hardware.</li>
+<li><strong>Define Your Objectives</strong>: Clearly articulate the goals and success metrics for your project.</li>
+<li><strong>Get Access to Data</strong>: Establish processes for collecting relevant data, including labels for supervised learning.</li>
+<li><strong>Split Your Data</strong>: Divide your data into training, validation, and test sets to ensure unbiased model evaluation.</li>
+<li><strong>Explore Your Data</strong>: Analyze your training data, perform sanity checks, and engineer new features.</li>
+<li><strong>Prepare Your Tools</strong>: Familiarize yourself with ML/AI tools and ensure your data is in the right format.</li>
+<li><strong>Train Some Models</strong>: Use algorithms to find patterns in your data and create predictive models.</li>
+<li><strong>Debug, Analyze, and Tune</strong>: Dive deep into your model’s performance and make necessary adjustments.</li>
+<li><strong>Validate Your Models</strong>: Use the validation dataset to assess your model’s performance without overfitting.</li>
+<li><strong>Test Your Model</strong>: Evaluate your model’s performance on entirely new data to ensure its real-world applicability.</li>
+<li><strong>Productionize Your System</strong>: Convert your prototype into a production-ready system, ensuring it integrates well with existing systems.</li>
+<li><strong>Run Live Experiments</strong>: Before full deployment, test your model in a live environment to ensure its effectiveness.</li>
+<li><strong>Monitor and Maintain</strong>: Continuously monitor your deployed system and make necessary updates to maintain its reliability.</li>
+</ol>
+<p>The author emphasizes that the art of applying AI to solve business problems is not just about algorithms but involves asking the right questions, preparing data, finding patterns, validating results, and ensuring long-term reliability.</p>
+</section>
 </section>
 <section id="designing-data-intensive-applications-the-drivetrain-approach" class="level2">
-<h2 class="anchored" data-anchor-id="designing-data-intensive-applications-the-drivetrain-approach">Designing Data-Intensive Applications: The Drivetrain Approach</h2>
+<h2 class="anchored" data-anchor-id="designing-data-intensive-applications-the-drivetrain-approach"><a href="https://www.oreilly.com/radar/drivetrain-approach-data-products/">Designing Data-Intensive Applications: The Drivetrain Approach</a></h2>
 <p>In this section, you’re introduced to a systematic approach to designing data-intensive applications, known as the Drivetrain Approach. This methodology emphasizes the importance of starting with a clear objective and then leveraging data and models to achieve that goal.</p>
 <section id="the-four-steps-of-the-drivetrain-approach" class="level3">
 <h3 class="anchored" data-anchor-id="the-four-steps-of-the-drivetrain-approach">The Four Steps of the Drivetrain Approach:</h3>
@@ -561,6 +1544,12 @@ font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre><
 </section>
 <section id="technical-debt-in-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="technical-debt-in-machine-learning">Technical Debt in Machine Learning</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.whatcandatado.com/posts/DoingDataAtScale/Data Intensive Applications/https:/www.researchgate.net/publication/361136173/figure/fig1/AS:1164187606745088@1654575363189/Hidden-technical-debt-in-machine-learning-systems-Sculley-et-al-2015.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Tech Debt in ML Systems</figcaption>
+</figure>
+</div>
 <p>The lecture introduces the concept of “technical debt” in machine learning. While it might be easy to start building a machine learning system, taking shortcuts without considering the long-term implications can lead to accumulating technical debt. This debt refers to the future costs of rectifying shortcuts and oversights made during the initial development phase.</p>
 <p>If not addressed, technical debt can lead to significant challenges in the future, making the system expensive to maintain and potentially leading to its failure. The metaphor of going “bankrupt” is used to describe a scenario where a system becomes too cumbersome to manage due to accumulated technical debt.</p>
 <p>A key takeaway is that the actual machine learning coding, which many might be familiar with, becomes a small part of the entire process of building and maintaining data-intensive applications. The lecture references a paper that delves deeper into this concept, highlighting the various components involved in building these applications beyond just the machine learning code.</p>
@@ -776,29 +1765,26 @@ font-style: inherit;"># Coming in the spring of 2024</span></span></code></pre><
 
 
 
-<p>Introduction to the Course</p>
-<p>You’re introduced to the course structure and its objectives. The course is designed to provide you with hands-on experience in data-intensive application development. You’ll be using the Databricks platform, which offers a unified analytics platform that combines big data and AI. This platform will be the primary tool for your learning journey.</p>
-<hr>
-<p>Course Modules and Projects</p>
-<p>You’ll be going through six modules in this course, each with its own set of objectives and activities. The course is structured around four projects. The final project is particularly interesting as you’ll be building a lake house for transportation-based data and training a machine learning model. This project will be done in teams of four, and you’ll be working on the Databricks enterprise platform. The grading system is explained, with the first three projects accounting for 50% of your grade and the final project making up the other 50%.</p>
-<hr>
-<p>Blackboard and Course Materials</p>
-<p>You’re guided through the Blackboard platform, which will be essential for accessing course materials, announcements, and other relevant information. The platform also has a discussion board where you can post questions and engage with fellow students. It’s emphasized that active participation in the discussion board can be beneficial for collaborative learning.</p>
-<hr>
-<p>Office Hours and TA Introduction</p>
-<p>You learn about the availability of weekly office hours via Zoom. Both the instructors are open to scheduling flexible timings based on your convenience. There’s also a teaching assistant (TA) for the course, who will assist in various aspects, including the submission of notebooks.</p>
-<hr>
-<p>Getting Started</p>
-<p>You’re provided with a checklist of things to do to kickstart your learning: - Log into Blackboard and familiarize yourself with its features. - Read the course syllabus and schedule. - Complete the academic honesty quiz. - Set up a GitHub account. - Register for a Databricks community edition account. - Import the Learning Spark notebooks from GitHub to your Databricks account.</p>
-<hr>
-<p>Importance of Live Participation</p>
-<p>While the lectures will be recorded and made available for later viewing, you’re encouraged to participate live in the Zoom sessions. Live participation allows for real-time interaction, immediate clarification of doubts, and a more engaging learning experience.</p>
-<hr>
-<p>Conclusion and Next Steps</p>
-<p>The session concludes with a reminder about the next lecture, which will delve into the introduction to data-intensive applications. You’re encouraged to prepare and actively participate in the upcoming sessions.</p>
-<p>Remember, this course is designed to be hands-on, and you’ll get the most out of it by actively engaging, asking questions, and collaborating with peers.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.whatcandatado.com/posts/DoingDataAtScale/Introduction/data_at_scale.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Doing Data at Scale</figcaption>
+</figure>
+</div>
+<section id="modules" class="level2">
+<h2 class="anchored" data-anchor-id="modules">Modules</h2>
+<ul>
+<li><a href="'../Data Intensive Applications/index.ipynb'">Data intensive applications (DIA</a></li>
+<li>Spark overview (distributed compute)</li>
+<li>Spark Optimization - spark simulator</li>
+<li>Data Engineering</li>
+<li>Machine Learning Operations</li>
+<li>End 2 End Application Development</li>
+</ul>
+<p>Data intensive applications combine a large complement of data and compute to augment or replace human capacity for the benefit of optimizing important processes.</p>
 
 
+</section>
 
  ]]></description>
   <category>Courses</category>

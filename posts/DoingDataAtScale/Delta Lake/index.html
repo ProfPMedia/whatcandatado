@@ -157,7 +157,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#key-features-of-delta-lake" id="toc-key-features-of-delta-lake" class="nav-link active" data-scroll-target="#key-features-of-delta-lake">Key Features of Delta Lake:</a></li>
+  <li><a href="#problems-delta-lake-solves" id="toc-problems-delta-lake-solves" class="nav-link" data-scroll-target="#problems-delta-lake-solves">Problems Delta Lake Solves:</a></li>
+  <li><a href="#significance-of-delta-lake-in-the-data-stack" id="toc-significance-of-delta-lake-in-the-data-stack" class="nav-link" data-scroll-target="#significance-of-delta-lake-in-the-data-stack">Significance of Delta Lake in the Data Stack:</a></li>
+  <li><a href="#integration-with-spark" id="toc-integration-with-spark" class="nav-link" data-scroll-target="#integration-with-spark">Integration with Spark:</a>
+  <ul class="collapse">
+  <li><a href="#atomicity" id="toc-atomicity" class="nav-link" data-scroll-target="#atomicity">1. Atomicity:</a></li>
+  <li><a href="#consistency" id="toc-consistency" class="nav-link" data-scroll-target="#consistency">2. Consistency:</a></li>
+  <li><a href="#isolation" id="toc-isolation" class="nav-link" data-scroll-target="#isolation">3. Isolation:</a></li>
+  <li><a href="#durability" id="toc-durability" class="nav-link" data-scroll-target="#durability">4. Durability:</a></li>
+  </ul></li>
+  <li><a href="#create-a-delta-table" id="toc-create-a-delta-table" class="nav-link" data-scroll-target="#create-a-delta-table">Create a Delta Table</a></li>
+  <li><a href="#read-the-delta-table" id="toc-read-the-delta-table" class="nav-link" data-scroll-target="#read-the-delta-table">Read the delta Table</a></li>
+  <li><a href="#update-table---overwrite" id="toc-update-table---overwrite" class="nav-link" data-scroll-target="#update-table---overwrite">Update table - overwrite</a></li>
+  <li><a href="#conditional-update-without-overwrite" id="toc-conditional-update-without-overwrite" class="nav-link" data-scroll-target="#conditional-update-without-overwrite">Conditional update without overwrite</a></li>
+  <li><a href="#read-older-versions-of-data-using-time-travel" id="toc-read-older-versions-of-data-using-time-travel" class="nav-link" data-scroll-target="#read-older-versions-of-data-using-time-travel">Read older versions of data using time travel</a></li>
+  <li><a href="#looking-at-the-underlying-transaction-log-maintained-by-delta-lake" id="toc-looking-at-the-underlying-transaction-log-maintained-by-delta-lake" class="nav-link" data-scroll-target="#looking-at-the-underlying-transaction-log-maintained-by-delta-lake">Looking at the underlying transaction log maintained by Delta Lake</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -196,11 +217,285 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption class="figure-caption">Delta Lake</figcaption>
 </figure>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coming in the spring of 2024</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<ul>
+<li><a href="https://www.vldb.org/pvldb/vol13/p3411-armbrust.pdf">Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores</a></li>
+<li><a href="https://docs.delta.io/latest/index.html">Delta Lake Documentation</a></li>
+</ul>
+<section id="key-features-of-delta-lake" class="level2">
+<h2 class="anchored" data-anchor-id="key-features-of-delta-lake">Key Features of Delta Lake:</h2>
+<ol type="1">
+<li><strong>ACID Transactions</strong>: Delta Lake provides full ACID transactional capabilities, ensuring data integrity and consistency.</li>
+<li><strong>Scalable Metadata Handling</strong>: It uses a unique approach to handle metadata, allowing it to scale to billions of partitions and trillions of files.</li>
+<li><strong>Unified Batch and Streaming</strong>: Delta Lake supports both batch and streaming workloads with a unified experience.</li>
+<li><strong>Schema Evolution</strong>: It allows for schema-on-read and schema-on-write, enabling users to evolve their datasets over time.</li>
+<li><strong>Audit History</strong>: Delta Lake maintains a detailed audit trail of all changes, allowing for versioning and time-travel capabilities.</li>
+<li><strong>Support for Deletes, Updates, and Merges</strong>: Delta Lake supports operations like DELETE, UPDATE, and MERGE INTO, which are typically not available in most data lakes.</li>
+</ol>
+</section>
+<section id="problems-delta-lake-solves" class="level2">
+<h2 class="anchored" data-anchor-id="problems-delta-lake-solves">Problems Delta Lake Solves:</h2>
+<ol type="1">
+<li><strong>Data Reliability</strong>: Traditional data lakes often suffer from issues like data corruption, missing files, or duplicate data. Delta Lake’s ACID transactions eliminate these problems.</li>
+<li><strong>Performance</strong>: By leveraging Spark’s capabilities and optimizing storage layer operations, Delta Lake provides faster query performance.</li>
+<li><strong>Complex ETL Workflows</strong>: Delta Lake simplifies ETL workflows by supporting operations like upserts and deletes.</li>
+<li><strong>Metadata Scalability</strong>: Handling metadata for large datasets can be challenging. Delta Lake’s approach to metadata ensures scalability and performance.</li>
+</ol>
+</section>
+<section id="significance-of-delta-lake-in-the-data-stack" class="level2">
+<h2 class="anchored" data-anchor-id="significance-of-delta-lake-in-the-data-stack">Significance of Delta Lake in the Data Stack:</h2>
+<ol type="1">
+<li><strong>Enhanced Data Reliability</strong>: By providing ACID transactions, Delta Lake ensures that the data is reliable and consistent, which is crucial for analytical workloads.</li>
+<li><strong>Flexibility</strong>: With support for schema evolution and a wide range of operations, Delta Lake offers flexibility in managing and processing data.</li>
+<li><strong>Integration with Existing Tools</strong>: Delta Lake seamlessly integrates with existing tools and frameworks, ensuring that organizations can adopt it without significant changes to their existing infrastructure.</li>
+</ol>
+</section>
+<section id="integration-with-spark" class="level2">
+<h2 class="anchored" data-anchor-id="integration-with-spark">Integration with Spark:</h2>
+<ol type="1">
+<li><strong>Native Integration</strong>: Delta Lake is built on top of Spark, ensuring native integration and optimization.</li>
+<li><strong>Optimized Query Execution</strong>: Delta Lake leverages Spark’s Catalyst optimizer for efficient query execution.</li>
+<li><strong>Use of Spark APIs</strong>: Users can utilize familiar Spark APIs to read and write data in Delta Lake, ensuring a smooth user experience.</li>
+</ol>
+<p>Delta Lake is a significant addition to the data stack as it addresses many of the challenges faced by traditional data lakes. By providing ACID transactions, scalable metadata handling, and a range of operations, Delta Lake ensures that data is reliable, consistent, and easily accessible. Its deep integration with Spark further enhances its capabilities, making it a powerful tool for data processing and analytics.</p>
+<p>ACID is an acronym that stands for Atomicity, Consistency, Isolation, and Durability. These are a set of properties that ensure reliable processing of database transactions. Let’s delve into each of these properties:</p>
+<section id="atomicity" class="level3">
+<h3 class="anchored" data-anchor-id="atomicity">1. Atomicity:</h3>
+<p><strong>Definition</strong>: Atomicity ensures that a transaction is treated as a single, indivisible unit, which means either all of its operations are executed or none of them are. If a transaction is interrupted (for example, due to a system crash or power failure), any changes that it made are rolled back to ensure the database remains in a consistent state.</p>
+<p><strong>Example</strong>: Consider a banking application where you are transferring money from one account to another. This transaction involves two operations: - Deducting the amount from the source account. - Adding the amount to the destination account.</p>
+<p>If the system fails after deducting the amount but before adding it to the destination account, atomicity ensures that the deducted amount is rolled back to the source account, ensuring no money is lost.</p>
+</section>
+<section id="consistency" class="level3">
+<h3 class="anchored" data-anchor-id="consistency">2. Consistency:</h3>
+<p><strong>Definition</strong>: Consistency ensures that a transaction brings the database from one valid state to another. After a transaction has been committed, the changes are permanent, and the database will be left in a consistent state. Any transaction that would violate the database’s consistency rules is rolled back.</p>
+<p><strong>Example</strong>: In the same banking application, suppose there’s a rule that an account balance should never go below $100. If a transaction tries to withdraw an amount that would violate this rule, the transaction would be rolled back, ensuring the database remains consistent.</p>
+</section>
+<section id="isolation" class="level3">
+<h3 class="anchored" data-anchor-id="isolation">3. Isolation:</h3>
+<p><strong>Definition</strong>: Isolation ensures that concurrent transactions are executed in such a way that the results are the same as if the transactions were executed serially, one after the other. This means that the intermediate state of a transaction is invisible to other transactions.</p>
+<p><strong>Example</strong>: Imagine two transactions: - Transaction A reads a value and increases it by $10. - Transaction B reads the same value simultaneously and increases it by $20.</p>
+<p>If these transactions are not isolated, they might both read the same initial value, say $100, and update it to $110 and $120, respectively. With proper isolation, the final value would be $130, as one transaction would wait for the other to complete before reading the updated value.</p>
+</section>
+<section id="durability" class="level3">
+<h3 class="anchored" data-anchor-id="durability">4. Durability:</h3>
+<p><strong>Definition</strong>: Durability ensures that once a transaction has been committed, its effects are permanent, even in the case of system failures. This is typically achieved by storing transaction logs or using backup mechanisms.</p>
+<p><strong>Example</strong>: After completing a purchase in an online store, the transaction details are written to the database. Even if the system crashes immediately after, durability ensures that the transaction details are not lost and can be recovered when the system restarts.</p>
+<p>ACID properties are fundamental to ensuring the reliability and robustness of database systems. They ensure that the data remains consistent and intact even in the face of system failures or concurrent access.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyspark</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> delta <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>builder <span class="op">=</span> (</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    pyspark.sql.SparkSession.builder.appName(<span class="st">"MyApp"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    .config(<span class="st">"spark.sql.extensions"</span>, <span class="st">"io.delta.sql.DeltaSparkSessionExtension"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    .config(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"spark.sql.catalog.spark_catalog"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"org.apache.spark.sql.delta.catalog.DeltaCatalog"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>spark <span class="op">=</span> configure_spark_with_delta_pip(builder).getOrCreate()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="create-a-delta-table" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-delta-table">Create a Delta Table</h2>
+<ul>
+<li>Underlying format uses columnar Parquet Files</li>
+<li>JSON delta log is used by the delta lake transactional core software</li>
+</ul>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> spark.<span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data.write.<span class="bu">format</span>(<span class="st">"delta"</span>).save(<span class="st">"./delta-table"</span>, OVERWRITE<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>ls delta<span class="op">-</span>table<span class="op">/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>_delta_log
+part-00000-aa7ed3d3-662a-46cf-b94f-f90235a78d46-c000.snappy.parquet
+part-00001-c57f57a0-c72a-43ad-8529-a37859acd44f-c000.snappy.parquet
+part-00002-50f9305f-41cc-43e6-b532-7f4c50233b3f-c000.snappy.parquet
+part-00003-19ed009f-69d1-49ce-86f1-312cb074b6a3-c000.snappy.parquet</code></pre>
+</div>
+</div>
+</section>
+<section id="read-the-delta-table" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-delta-table">Read the delta Table</h2>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> spark.read.<span class="bu">format</span>(<span class="st">"delta"</span>).load(<span class="st">"./delta-table"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  3|
+|  4|
+|  2|
+|  0|
+|  1|
++---+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="update-table---overwrite" class="level2">
+<h2 class="anchored" data-anchor-id="update-table---overwrite">Update table - overwrite</h2>
+<div class="cell" data-tags="[]" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> spark.<span class="bu">range</span>(<span class="dv">5</span>, <span class="dv">10</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data.write.<span class="bu">format</span>(<span class="st">"delta"</span>).mode(<span class="st">"overwrite"</span>).save(<span class="st">"./delta-table"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> spark.read.<span class="bu">format</span>(<span class="st">"delta"</span>).load(<span class="st">"./delta-table"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  8|
+|  9|
+|  5|
+|  6|
+|  7|
++---+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="conditional-update-without-overwrite" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-update-without-overwrite">Conditional update without overwrite</h2>
+<div class="cell" data-tags="[]" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> delta.tables <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyspark.sql.functions <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>deltaTable <span class="op">=</span> DeltaTable.forPath(spark, <span class="st">"./delta-table"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Update every even value by adding 100 to it</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>deltaTable.update(condition<span class="op">=</span>expr(<span class="st">"id % 2 == 0"</span>), <span class="bu">set</span><span class="op">=</span>{<span class="st">"id"</span>: expr(<span class="st">"id + 100"</span>)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>deltaTable.toDF().show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|108|
+|  9|
+|  5|
+|  7|
+|106|
++---+
+</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Delete every even value</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>deltaTable.delete(condition<span class="op">=</span>expr(<span class="st">"id % 2 == 0"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>deltaTable.toDF().show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  9|
+|  5|
+|  7|
++---+
+</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Upsert (merge) new data</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>newData <span class="op">=</span> spark.<span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>deltaTable.alias(<span class="st">"oldData"</span>).merge(</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    newData.alias(<span class="st">"newData"</span>), <span class="st">"oldData.id = newData.id"</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>).whenMatchedUpdate(<span class="bu">set</span><span class="op">=</span>{<span class="st">"id"</span>: col(<span class="st">"newData.id"</span>)}).whenNotMatchedInsert(</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    values<span class="op">=</span>{<span class="st">"id"</span>: col(<span class="st">"newData.id"</span>)}</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>).execute()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>deltaTable.toDF().show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  0|
+|  1|
+|  2|
+|  3|
+|  4|
+|  5|
+|  6|
+|  7|
+|  8|
+|  9|
+| 10|
+| 11|
+| 12|
+| 13|
+| 14|
+| 15|
+| 16|
+| 17|
+| 18|
+| 19|
++---+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="read-older-versions-of-data-using-time-travel" class="level2">
+<h2 class="anchored" data-anchor-id="read-older-versions-of-data-using-time-travel">Read older versions of data using time travel</h2>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> spark.read.<span class="bu">format</span>(<span class="st">"delta"</span>).option(<span class="st">"versionAsOf"</span>, <span class="dv">0</span>).load(<span class="st">"./delta-table"</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>df.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>                                                                                </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>+---+
+| id|
++---+
+|  3|
+|  4|
+|  2|
+|  0|
+|  1|
++---+
+</code></pre>
+</div>
+</div>
+</section>
+<section id="looking-at-the-underlying-transaction-log-maintained-by-delta-lake" class="level2">
+<h2 class="anchored" data-anchor-id="looking-at-the-underlying-transaction-log-maintained-by-delta-lake">Looking at the underlying transaction log maintained by Delta Lake</h2>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>cat .<span class="op">/</span>delta<span class="op">-</span>table<span class="op">/</span>_delta_log<span class="op">/</span><span class="ot">00000000000000000003.j</span><span class="er">son</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{"remove":{"path":"part-00000-ad39a0c3-57cd-4b19-bd34-c1322d1f026e-c000.snappy.parquet","deletionTimestamp":1698778757438,"dataChange":true,"extendedFileMetadata":true,"partitionValues":{},"size":486}}
+{"remove":{"path":"part-00001-a61ba60f-f4eb-40c1-ab50-88fa3600e94a-c000.snappy.parquet","deletionTimestamp":1698778757438,"dataChange":true,"extendedFileMetadata":true,"partitionValues":{},"size":478}}
+{"add":{"path":"part-00000-dbf8c991-8a1a-42b4-9b3e-93dcb13801fa-c000.snappy.parquet","partitionValues":{},"size":478,"modificationTime":1698778757430,"dataChange":true,"stats":"{\"numRecords\":1,\"minValues\":{\"id\":9},\"maxValues\":{\"id\":9},\"nullCount\":{\"id\":0}}"}}
+{"commitInfo":{"timestamp":1698778757453,"operation":"DELETE","operationParameters":{"predicate":"[\"((id % 2L) = 0L)\"]"},"readVersion":2,"isolationLevel":"Serializable","isBlindAppend":false,"operationMetrics":{"numRemovedFiles":"2","numCopiedRows":"1","numAddedChangeFiles":"0","executionTimeMs":"899","numDeletedRows":"2","scanTimeMs":"722","numAddedFiles":"1","rewriteTimeMs":"177"},"engineInfo":"Apache-Spark/3.3.1 Delta-Lake/2.1.0","txnId":"951deaaf-e06b-464a-bbf1-a2e6bc62efb7"}}</code></pre>
+</div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
