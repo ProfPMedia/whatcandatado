@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.whatcandatado.com/index.html</loc>
-    <lastmod>2023-11-05T18:04:01.809Z</lastmod>
+    <lastmod>2023-11-05T19:21:16.905Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/archive.html</loc>
-    <lastmod>2023-11-05T18:03:59.085Z</lastmod>
+    <lastmod>2023-11-05T19:21:14.081Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/welcome/index.html</loc>
-    <lastmod>2023-11-05T18:03:55.785Z</lastmod>
+    <lastmod>2023-11-05T19:21:11.097Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Introduction/index.html</loc>
-    <lastmod>2023-11-05T18:03:53.561Z</lastmod>
+    <lastmod>2023-11-05T19:21:08.913Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Spark/index.html</loc>
-    <lastmod>2023-11-05T18:03:51.453Z</lastmod>
+    <lastmod>2023-11-05T19:21:06.189Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Delta Lake/index.html</loc>
-    <lastmod>2023-11-05T18:03:49.121Z</lastmod>
+    <lastmod>2023-11-05T19:21:04.073Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/about.html</loc>
-    <lastmod>2023-11-05T18:03:43.161Z</lastmod>
+    <lastmod>2023-11-05T19:20:58.289Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Data Intensive Applications/index.html</loc>
-    <lastmod>2023-11-05T18:03:47.505Z</lastmod>
+    <lastmod>2023-11-05T19:21:02.433Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Building a Data Intensive Applications/index.html</loc>
-    <lastmod>2023-11-05T18:03:50.181Z</lastmod>
+    <lastmod>2023-11-05T19:21:04.929Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/MLflow/index.html</loc>
-    <lastmod>2023-11-05T18:03:52.457Z</lastmod>
+    <lastmod>2023-11-05T19:21:07.313Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/Data vs. Information/index.html</loc>
-    <lastmod>2023-11-05T18:03:54.653Z</lastmod>
+    <lastmod>2023-11-05T19:21:09.989Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataWranglingRight/ddar.html</loc>
-    <lastmod>2023-11-05T18:03:58.249Z</lastmod>
+    <lastmod>2023-11-05T19:21:13.305Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/doingdata-series.html</loc>
-    <lastmod>2023-11-05T18:04:00.317Z</lastmod>
+    <lastmod>2023-11-05T19:21:15.437Z</lastmod>
   </url>
 </urlset>
