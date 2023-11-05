@@ -1,6 +1,7 @@
 project:
   type: website
-  
+resources:
+  - CNAME  
 website:
   title: "What Can Data Do? - A place for the Data Curious."
   site-url: "https://www.whatcandatado.com"
