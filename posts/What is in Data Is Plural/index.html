@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2023-11-06">
+
+<title>What Can Data Do? - A place for the Data Curious. - What is in Data Is Plural?</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">What Can Data Do? - A place for the Data Curious.</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../archive.html" rel="" target="">
+ <span class="menu-text">Archive</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://profpmedia.com/" rel="" target=""><i class="bi bi-globe2" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@whatcandatado" rel="" target=""><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/lloydpalum/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-semantic-search" id="toc-what-is-semantic-search" class="nav-link active" data-scroll-target="#what-is-semantic-search">What is Semantic Search</a></li>
+  <li><a href="#what-is-the-all-mpnet-base-scentence-transformer-and-how-does-it-work" id="toc-what-is-the-all-mpnet-base-scentence-transformer-and-how-does-it-work" class="nav-link" data-scroll-target="#what-is-the-all-mpnet-base-scentence-transformer-and-how-does-it-work">What is the all-mpnet-base scentence transformer and how does it work?</a></li>
+  <li><a href="#what-is-cosine-simarity-and-how-do-i-calculate-it" id="toc-what-is-cosine-simarity-and-how-do-i-calculate-it" class="nav-link" data-scroll-target="#what-is-cosine-simarity-and-how-do-i-calculate-it">What is Cosine Simarity and How do I calculate it?</a></li>
+  <li><a href="#how-we-are-going-to-apply-semantic-search-to-the-dip-catalog" id="toc-how-we-are-going-to-apply-semantic-search-to-the-dip-catalog" class="nav-link" data-scroll-target="#how-we-are-going-to-apply-semantic-search-to-the-dip-catalog">How we are going to apply Semantic Search to the DIP catalog</a></li>
+  <li><a href="#step-1---install-the-requisite-python-libraries-needed-to-do-semantic-search" id="toc-step-1---install-the-requisite-python-libraries-needed-to-do-semantic-search" class="nav-link" data-scroll-target="#step-1---install-the-requisite-python-libraries-needed-to-do-semantic-search">Step 1 - Install the requisite python libraries needed to do semantic search</a></li>
+  <li><a href="#step-2---import-the-requisite-libraries" id="toc-step-2---import-the-requisite-libraries" class="nav-link" data-scroll-target="#step-2---import-the-requisite-libraries">Step 2 - Import the requisite libraries</a></li>
+  <li><a href="#step-3---load-the-data-is-plural-catalog-spreadsheet" id="toc-step-3---load-the-data-is-plural-catalog-spreadsheet" class="nav-link" data-scroll-target="#step-3---load-the-data-is-plural-catalog-spreadsheet">Step 3 - Load the Data is Plural Catalog Spreadsheet</a></li>
+  <li><a href="#step-4-create-descriptions-and-embedding-vectors-for-each" id="toc-step-4-create-descriptions-and-embedding-vectors-for-each" class="nav-link" data-scroll-target="#step-4-create-descriptions-and-embedding-vectors-for-each">Step 4 Create descriptions and embedding vectors for each</a></li>
+  <li><a href="#step-5-create-a-utility-function-that-returns-the-closest-matches-to-a-question." id="toc-step-5-create-a-utility-function-that-returns-the-closest-matches-to-a-question." class="nav-link" data-scroll-target="#step-5-create-a-utility-function-that-returns-the-closest-matches-to-a-question.">Step 5 Create a utility function that returns the closest matches to a question.</a></li>
+  <li><a href="#step-6-answer-questions-about-the-data-is-plural-catalog" id="toc-step-6-answer-questions-about-the-data-is-plural-catalog" class="nav-link" data-scroll-target="#step-6-answer-questions-about-the-data-is-plural-catalog">Step 6 Answer questions about the Data Is Plural Catalog</a></li>
+  <li><a href="#and-with-that-we-wrap-up-for-the-moment" id="toc-and-with-that-we-wrap-up-for-the-moment" class="nav-link" data-scroll-target="#and-with-that-we-wrap-up-for-the-moment">And with that, we wrap up for the moment…</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">What is in Data Is Plural?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">EDA</div>
+    <div class="quarto-category">LLM</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 6, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://fivethirtyeight.com/wp-content/uploads/2022/05/DATA-IS-PLURAL-3-4x3-1.png?w=350" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">DIP</figcaption>
+</figure>
+</div>
+<p>At What Can Data Do?, we delve into the wealth of data found in <a href="https://www.data-is-plural.com/">Data is Plural</a>, a weekly newsletter by Jeremy Singer-Vine that showcases a rich selection of datasets. As a long-time admirer, I often turn to this resource when seeking out well-curated data for my research. Jeremy’s compilation boasts over 1,750 datasets and continues to expand each week.</p>
+<p>One challenge I’ve encountered is navigating the archive—it’s not the most search-friendly. While Jeremy provides a Google Sheet with details on the featured datasets, it doesn’t quite facilitate inquiries such as: <strong>“Which datasets in the archive relate to global energy production?”</strong></p>
+<p>To address this, I embarked on enhancing the archive’s searchability. By applying semantic search to the entirety of Data is Plural’s publications, my goal was not only to learn but also to forge a tool that elevates the ease of data discovery. Let’s dive in…</p>
+<section id="what-is-semantic-search" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-semantic-search">What is Semantic Search</h3>
+<p>Semantic search transcends the traditional keyword match, delving into the intent and contextual nuance behind a query to fetch the most pertinent information. Rather than simply scanning for specific terms, it employs sophisticated cognitive tools to consider elements such as:</p>
+<ul>
+<li><p><strong>Contextual Understanding</strong>: Words shift in meaning based on their use. Semantic search aims to grasp this context, refining its accuracy.</p></li>
+<li><p><strong>Recognition of Synonyms</strong>: It appreciates that different terms can share meanings and provides relevant findings even when exact search terms are absent from the content.</p></li>
+<li><p><strong>Natural Language Processing (NLP)</strong>: Utilizing NLP, semantic search interprets the searcher’s intent, managing conversational queries with finesse.</p></li>
+<li><p><strong>Conceptual Insight</strong>: It searches for ideas and meanings rather than just phrase matches, capturing the essence behind the words.</p></li>
+<li><p><strong>Discerning User Intent</strong>: Semantic search adjusts results to align with whether a user aims to purchase, explore, locate, or troubleshoot.</p></li>
+<li><p><strong>Tailored Results</strong>: It may also integrate personal data like past behavior, locale, or time, to customize the search experience.</p></li>
+</ul>
+<p>Powered by machine learning, ontologies, and NLP, semantic search is adept at closing the gap between what users seek and the content they find. This technology proves invaluable in customer support, e-commerce, knowledge management, and content discovery, ensuring users connect more intuitively with the information they require.</p>
+</section>
+<section id="what-is-the-all-mpnet-base-scentence-transformer-and-how-does-it-work" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-all-mpnet-base-scentence-transformer-and-how-does-it-work">What is the all-mpnet-base scentence transformer and how does it work?</h3>
+<p>The <code>all-mpnet-base-v2</code> is a pre-trained model provided by the Hugging Face Sentence Transformers library, which is a Python framework for state-of-the-art sentence, text, and image embeddings. The model is based on the MPNet architecture, which stands for <a href="https://arxiv.org/abs/2004.09297">“Masked and Permuted Pre-training for Language Understanding.”</a></p>
+<p>MPNet is an innovative pre-training method that combines the strengths of BERT (<a href="https://arxiv.org/abs/1810.04805">Bidirectional Encoder Representations from Transformers</a>) and <a href="https://arxiv.org/abs/1906.08237">XLNet architectures</a> to effectively capture the contextual representations of words in a sentence. The MPNet is designed to understand the context from both the left and right sides of a token in the input sequence.</p>
+<p>Here’s how the <code>all-mpnet-base-v2</code> model works in the context of sentence transformers:</p>
+<ol type="1">
+<li><strong>Pre-training:</strong>
+<ul>
+<li>MPNet is pre-trained on a large corpus of text data using self-supervised learning. It uses a novel pre-training objective that masks some of the input tokens and permutes others, allowing the model to learn a deep understanding of language context and word relationships.</li>
+</ul></li>
+<li><strong>Sentence Embeddings:</strong>
+<ul>
+<li>The <code>all-mpnet-base-v2</code> model is fine-tuned to produce sentence embeddings. This means that for any given sentence or paragraph, the model generates a fixed-size vector representation that captures its semantic meaning. These embeddings can be used for a variety of downstream tasks such as semantic search, clustering, and classification.</li>
+</ul></li>
+<li><strong>Fine-tuning for Specific Tasks:</strong>
+<ul>
+<li>Although the model is pre-trained on a general corpus, it can be further fine-tuned on task-specific data to improve performance on particular tasks. For example, if you want to use the model for legal document analysis, you could fine-tune it on a corpus of legal texts.</li>
+</ul></li>
+<li><strong>Usage in Applications:</strong>
+<ul>
+<li>In applications, when you input a sentence to the <code>all-mpnet-base-v2</code> model, it processes the text through multiple transformer layers, generating an embedding vector that you can then use for semantic comparisons, search, or as input features to other machine learning models.</li>
+</ul></li>
+</ol>
+<p>The Sentence Transformers library makes it easy to use these models. You can load the <code>all-mpnet-base-v2</code> model and generate embeddings for your sentences with just a few lines of code. These embeddings are designed to be semantically meaningful, such that sentences with similar meanings are close to each other in the embedding space, which is beneficial for many NLP tasks that require understanding sentence similarity.</p>
+</section>
+<section id="what-is-cosine-simarity-and-how-do-i-calculate-it" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-cosine-simarity-and-how-do-i-calculate-it">What is Cosine Simarity and How do I calculate it?</h3>
+<p>Cosine similarity is a measure of similarity between two non-zero vectors of an inner product space that measures the cosine of the angle between them. The cosine of 0° is 1, and it is less than 1 for any other angle.</p>
+<p>It is thus a judgment of orientation and not magnitude: two vectors with the same orientation have a cosine similarity of 1, two vectors at 90° have a similarity of 0, and two vectors diametrically opposed have a similarity of -1, independent of their magnitude.</p>
+<p>Cosine similarity is particularly used in positive space, where the outcome is neatly bounded in [0,1]. The cosine similarity, <code>S</code>, between two vectors <code>A</code> and <code>B</code> is calculated as follows:</p>
+<p>S(A, B) = dot(A,B) / (||A|| * ||B||)</p>
+<p>where:</p>
+<ul>
+<li>dot(A,B) is the dot product of the vectors,</li>
+<li>||A|| and ||B|| are the norms (magnitudes) of vectors <code>A</code> and <code>B</code>.</li>
+</ul>
+<p>This measure is a metric of the cosine of the angle between two n-dimensional vectors in an n-dimensional space. It should not be confused with a physical space, as it can be used for high dimensional spaces, e.g., text classification in an information retrieval context where each term is a dimension and the terms in a document are modeled as a vector for comparison with other documents.</p>
+</section>
+<section id="how-we-are-going-to-apply-semantic-search-to-the-dip-catalog" class="level3">
+<h3 class="anchored" data-anchor-id="how-we-are-going-to-apply-semantic-search-to-the-dip-catalog">How we are going to apply Semantic Search to the DIP catalog</h3>
+<ul>
+<li>Use the <a href="https://huggingface.co/">Hugging Face</a> open source model library</li>
+<li><a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2#all-mpnet-base-v2">Use the Sentence Transformer</a> It maps sentences &amp; paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.</li>
+<li>Use the cosine similarity measure to assess the “distance” between the descriptions in the catalog and the posed questions.</li>
+</ul>
+</section>
+<section id="step-1---install-the-requisite-python-libraries-needed-to-do-semantic-search" class="level2">
+<h2 class="anchored" data-anchor-id="step-1---install-the-requisite-python-libraries-needed-to-do-semantic-search">Step 1 - Install the requisite python libraries needed to do semantic search</h2>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip <span class="op">-</span>q install transformers[torch] torch scikit<span class="op">-</span>learn protobuf<span class="op">==</span><span class="fl">3.20.0</span> sentence<span class="op">-</span>transformers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-2---import-the-requisite-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="step-2---import-the-requisite-libraries">Step 2 - Import the requisite libraries</h2>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> SentenceTransformer, util</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-3---load-the-data-is-plural-catalog-spreadsheet" class="level2">
+<h2 class="anchored" data-anchor-id="step-3---load-the-data-is-plural-catalog-spreadsheet">Step 3 - Load the Data is Plural Catalog Spreadsheet</h2>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the CSV and preprocess</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>SHEET_ID <span class="op">=</span> <span class="st">'1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk'</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>SHEET_NAME <span class="op">=</span> <span class="st">'Items'</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f'https://docs.google.com/spreadsheets/d/</span><span class="sc">{</span>SHEET_ID<span class="sc">}</span><span class="ss">/gviz/tq?tqx=out:csv&amp;sheet=</span><span class="sc">{</span>SHEET_NAME<span class="sc">}</span><span class="ss">'</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data_df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Take a peak at the first several rows of the data</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>data_df.head(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">edition</th>
+<th data-quarto-table-cell-role="th">position</th>
+<th data-quarto-table-cell-role="th">headline</th>
+<th data-quarto-table-cell-role="th">text</th>
+<th data-quarto-table-cell-role="th">links</th>
+<th data-quarto-table-cell-role="th">hattips</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2015.10.21</td>
+<td>1</td>
+<td>Every place name in the United States.</td>
+<td>Sometimes, bureaucracy creates poetry. Since 1...</td>
+<td>http://geonames.usgs.gov/index.html\nhttp://ge...</td>
+<td>https://twitter.com/emilymbadger/status/653982...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2015.10.21</td>
+<td>2</td>
+<td>“There’s finally federal data on low-income co...</td>
+<td>The Hechinger Report casts doubt on the Pell g...</td>
+<td>http://hechingerreport.org/theres-finally-fede...</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2015.10.21</td>
+<td>3</td>
+<td>What police-related data does your city publish?</td>
+<td>The Police Open Data Census, created by Code f...</td>
+<td>https://codeforamerica.github.io/PoliceOpenDat...</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-create-descriptions-and-embedding-vectors-for-each" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-create-descriptions-and-embedding-vectors-for-each">Step 4 Create descriptions and embedding vectors for each</h2>
+<p>(takes several minutes)</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list of the headlines and description of each dataset in the catalog</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>descriptions <span class="op">=</span> (data_df[<span class="st">'headline'</span>] <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> data_df[<span class="st">'text'</span>]).tolist()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the links to each dataset to reference when we are performing the semantic search.</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>links <span class="op">=</span> data_df[<span class="st">'links'</span>].tolist()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Sentence Transformer model</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> SentenceTransformer(<span class="st">'sentence-transformers/all-mpnet-base-v2'</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>start_time <span class="op">=</span> time.time()</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert dataset descriptions to embeddings and store them NOT</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> model.encode(descriptions, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>end_time <span class="op">=</span> time.time()</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>elapsed_time <span class="op">=</span> end_time <span class="op">-</span> start_time</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The embedding of </span><span class="sc">{</span><span class="bu">len</span>(descriptions)<span class="sc">}</span><span class="ss"> descriptions took </span><span class="sc">{</span>elapsed_time<span class="sc">:4.0f}</span><span class="ss"> seconds to run"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"An example dataset description and its associated embedding..."</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(descriptions[<span class="dv">0</span>])</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The vectors are </span><span class="sc">{</span><span class="bu">len</span>(embeddings[<span class="dv">0</span>])<span class="sc">}</span><span class="ss"> in length.</span><span class="ch">\n</span><span class="ss">The first 10 elements of the vector for this description are:</span><span class="ch">\n</span><span class="sc">{</span>embeddings[<span class="dv">0</span>][<span class="dv">0</span>:<span class="dv">10</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The embedding of 1750 descriptions took  169 seconds to run
+An example dataset description and its associated embedding...
+Every place name in the United States. Sometimes, bureaucracy creates poetry. Since 1890, the U.S. Board on Geographic Names has been cataloguing, standardizing, and promulgating official names for the places we hike, swim, work, and call home. Along the way, it began publishing Geographic Names Information System (GNIS), a searchable and downloadable database containing all of its domestic nomenclature. In Alaska alone, the database lists names for 167 dams, 303 post offices, 666 glaciers, 2,704 capes, and 9,575 streams. My favorite: Confusion Creek. [h/t @emilymbadger]
+The vectors are 768 in length.
+The first 10 elements of the vector for this description are:
+tensor([ 0.0570,  0.0512, -0.0187, -0.0174, -0.0091,  0.0062,  0.0331, -0.0004,
+         0.0364, -0.0083])</code></pre>
+</div>
+</div>
+</section>
+<section id="step-5-create-a-utility-function-that-returns-the-closest-matches-to-a-question." class="level2">
+<h2 class="anchored" data-anchor-id="step-5-create-a-utility-function-that-returns-the-closest-matches-to-a-question.">Step 5 Create a utility function that returns the closest matches to a question.</h2>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">This function takes the following arguments:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"> - question (str)</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"> - embeddings (tensor)</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"> - descriptions (list)</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"> - links (list)</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"> - top_k (scalar)</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"> </span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">And returns the top_k closest descriptions to the question that was posed.</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">The routine uses the cosine similarity to assess the "distance" between the descriptions of the datasets</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">and the question that was posed.</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_closest_matches(question, embeddings, descriptions, links, top_k<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    question_embedding <span class="op">=</span> model.encode(question, convert_to_tensor<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Compute cosine similarities</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    similarities <span class="op">=</span> [util.pytorch_cos_sim(question_embedding, desc_embedding).item() <span class="cf">for</span> desc_embedding <span class="kw">in</span> embeddings]</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the indices of top matches</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    top_indices <span class="op">=</span> np.argsort(similarities)[<span class="op">-</span>top_k:][::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [(descriptions[idx], similarities[idx], links[idx]) <span class="cf">for</span> idx <span class="kw">in</span> top_indices]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-6-answer-questions-about-the-data-is-plural-catalog" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-answer-questions-about-the-data-is-plural-catalog">Step 6 Answer questions about the Data Is Plural Catalog</h2>
+<p>return similar datasets to the question including its description and a link to its source.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the minimum similarity for a match</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>MIN_SIM <span class="op">=</span> <span class="fl">0.6</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ask for a question</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    question <span class="op">=</span> <span class="bu">input</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Please enter your question (or type 'exit' to quit): "</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> question.lower() <span class="op">==</span> <span class="st">'exit'</span>:</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Find and print closest matches</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    matches <span class="op">=</span> find_closest_matches(question, embeddings, descriptions, links, <span class="dv">25</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Top matches:"</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, (desc, score, link) <span class="kw">in</span> <span class="bu">enumerate</span>(matches, <span class="dv">1</span>):</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> score <span class="op">&gt;</span> MIN_SIM:</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>desc<span class="sc">}</span><span class="ch">\n</span><span class="ss">(Score: </span><span class="sc">{</span>score<span class="sc">:.4f}</span><span class="ss">) References:"</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> r <span class="kw">in</span> link.split():</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"* </span><span class="sc">{</span>r<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdin">
+<pre><code>
+Please enter your question (or type 'exit' to quit):  Which datasets in the archive relate to global energy production?
+
+Please enter your question (or type 'exit' to quit):  exit</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Top matches:
+
+1. Grid emissions. Ember, an “energy think tank that uses data-driven insights to shift the world from coal to clean electricity,” has begun  compiling annual and monthly statistics on electricity demand, generation, and estimated greenhouse gas emissions by country, standardized from national and international sources. The annual estimates span two decades and 200+ countries and territories; the monthly dataset provides somewhat less coverage. Both can also be explored online. Related: Singularity’s Open Grid Emissions initiative estimates the hourly grid emissions of balancing authorities and power plants in the US, currently for 2019 and 2020. Previously: Other energy-related datasets. [h/t Philippe Quirion]
+(Score: 0.6854) References:
+* https://ember-climate.org/
+* https://twitter.com/nicolasfulghum/status/1572974235932364800
+* https://ember-climate.org/data-catalogue/yearly-electricity-data/
+* https://ember-climate.org/data-catalogue/monthly-electricity-data/
+* https://ember-climate.org/data/data-explorer/
+* https://singularity.energy/
+* https://singularity.energy/open-grid-emissions
+* https://medium.com/singularity-energy/validating-real-time-electricity-emissions-rates-with-an-hourly-historical-benchmark-a9990a2c9049
+* https://www.eia.gov/todayinenergy/detail.php?id=27152
+* https://www.data-is-plural.com/collections/energy
+
+2. European energy imports/exports. The EU’s Eurostat office publishes a range of statistical datasets on energy usage and economics, including annual imports and exports of petroleum, natural gas, and coal between European countries and their trading partners. Related: The Energy Information Administration tracks US imports and exports of petroleum, natural gas, and coal. As seen in: How Europe is dependent on Russian gas (New Statesman) and Why the Toughest Sanctions on Russia Are the Hardest for Europe to Wield (New York Times). Previously: European gas storage (DIP 2022.01.26), state-owned oil companies (DIP 2019.05.01), and global and gas infrastructure (DIP 2018.06.06). [h/t Lisa Charlotte Muth]
+(Score: 0.6618) References:
+* https://en.wikipedia.org/wiki/Eurostat
+* https://ec.europa.eu/eurostat/databrowser/explore/all/envir?lang=en&amp;subtheme=nrg&amp;display=list&amp;sort=category&amp;extractionId=NRG_TI_SFF__custom_2293925
+* https://ec.europa.eu/eurostat/databrowser/explore/all/envir?lang=en&amp;subtheme=nrg.nrg_quant.nrg_quanta.nrg_t.nrg_ti&amp;display=list&amp;sort=category&amp;extractionId=NRG_TI_SFF__custom_2293925
+* https://ec.europa.eu/eurostat/databrowser/explore/all/envir?lang=en&amp;subtheme=nrg.nrg_quant.nrg_quanta.nrg_t.nrg_te&amp;display=list&amp;sort=category&amp;extractionId=NRG_TI_SFF__custom_2293925
+* https://www.eia.gov/
+* https://www.eia.gov/petroleum/data.php#imports
+* https://www.eia.gov/naturalgas/data.php#imports
+* https://www.eia.gov/coal/data.php#imports
+* https://www.newstatesman.com/chart-of-the-day/2022/02/how-europe-is-dependent-on-russian-gas
+* https://www.nytimes.com/2022/02/25/business/economy/russia-europe-sanctions-gas-oil.html
+* https://agsi.gie.eu/
+* https://www.data-is-plural.com/archive/2022-01-26-edition/
+* https://www.nationaloilcompanydata.org/
+* https://www.data-is-plural.com/archive/2019-05-01-edition/
+* https://edx.netl.doe.gov/dataset/global-oil-gas-features-database
+* https://www.data-is-plural.com/archive/2018-06-06-edition/
+
+3. Wind and solar power. The Global Energy Monitor’s Global Wind Power Tracker is “a worldwide dataset of utility-scale wind facilities,” focusing on those with planned or installed capacities of at least 10 megawatts. It provides each facility’s name, location, status, capacity, installation type, owner, and other details. The project launched last week alongside a sibling dataset, the Global Solar Power Tracker. They join a growing collection of trackers from the organization, including those examining coal infrastructure, steel plants, and oil and gas resources. [h/t Nathaniel Hoffman]
+(Score: 0.6298) References:
+* https://globalenergymonitor.org/about/our-story/
+* https://globalenergymonitor.org/projects/global-wind-power-tracker/
+* https://globalenergymonitor.org/press-release/new-trackers-showing-country-by-country-build-out-of-utility-scale-solar-and-wind/
+* https://globalenergymonitor.org/projects/global-solar-power-tracker/
+* https://globalenergymonitor.org/about/our-story/
+* https://globalenergymonitor.org/projects/
+* https://globalenergymonitor.org/projects/global-coal-tracker/
+* https://globalenergymonitor.org/projects/global-steel-plant-tracker/
+* https://globalenergymonitor.org/projects/global-oil-gas-extraction-tracker/
+
+4. Power plants. The Global Power Plant Database, published by the World Resources Institute, “is a comprehensive, open source database of power plants around the world” and contains “information on plant capacity, generation, ownership, and fuel type.” The current edition, released in June 2018, covers 28,600+ power plants in 164 countries — including more than 1,000 each in Brazil, Canada, China, Great Britain, France, and the United States. Previously: U.S. power plants (DIP 2016.02.10). [h/t Kelly Rose + Paul Deane]
+(Score: 0.6279) References:
+* http://datasets.wri.org/dataset/globalpowerplantdatabase
+* https://www.wri.org/our-work
+* https://www.eia.gov/electricity/data/eia923/
+* https://tinyletter.com/data-is-plural/letters/data-is-plural-2016-02-10-edition
+
+5. Oil and gas. The Joint Organisations Data Initiative (JODI) coordinates the collection, standardization, and publication of oil and gas data from around the world; the 100+ countries that participate represent the vast majority of global production. The oil data goes back to 2002; the gas data goes back to 2009. Both datasets are updated monthly and track a range of subproducts (e.g., crude oil, diesel, jet fuel) and flows (e.g., imports, exports, production) for each country. Previously: Global and gas infrastructure (DIP 2018.06.06) and state-owned oil companies (DIP 2019.05.01).
+(Score: 0.6203) References:
+* https://www.jodidata.org/about-jodi/history.aspx
+* https://www.jodidata.org/about-jodi/jodi-world-databases.aspx
+* https://www.jodidata.org/gas/database/data-downloads.aspx
+* https://edx.netl.doe.gov/dataset/global-oil-gas-features-database
+* https://tinyletter.com/data-is-plural/letters/data-is-plural-2018-06-06-edition
+* https://tinyletter.com/data-is-plural/letters/data-is-plural-2019-05-01-edition
+* https://tinyletter.com/data-is-plural/letters/data-is-plural-2019-05-01-edition</code></pre>
+</div>
+</div>
+</section>
+<section id="and-with-that-we-wrap-up-for-the-moment" class="level2">
+<h2 class="anchored" data-anchor-id="and-with-that-we-wrap-up-for-the-moment">And with that, we wrap up for the moment…</h2>
+<p>Don’t forget to hit subscribe on the <a href="https://www.youtube.com/@whatcandatado?sub_confirmation=1">What Can Data Do?</a> YouTube channel. Stay tuned for those succinct data nuggets tailor-made for the ever-busy data enthusiasts. In data, we trust!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="quarto-dev/quarto-web" data-repo-id="MDEwOlJlcG9zaXRvcnkzNDc2MzMzNTg=" data-category="Blog" data-category-id="DIC_kwDOFLh2zs4CBQQq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
