@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.whatcandatado.com/index.html</loc>
-    <lastmod>2023-11-05T19:21:16.905Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/archive.html</loc>
-    <lastmod>2023-11-05T19:21:14.081Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/posts/welcome/index.html</loc>
-    <lastmod>2023-11-05T19:21:11.097Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Introduction/index.html</loc>
-    <lastmod>2023-11-05T19:21:08.913Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Spark/index.html</loc>
-    <lastmod>2023-11-05T19:21:06.189Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Delta Lake/index.html</loc>
-    <lastmod>2023-11-05T19:21:04.073Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/about.html</loc>
-    <lastmod>2023-11-05T19:20:58.289Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Data Intensive Applications/index.html</loc>
-    <lastmod>2023-11-05T19:21:02.433Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Building a Data Intensive Applications/index.html</loc>
-    <lastmod>2023-11-05T19:21:04.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/MLflow/index.html</loc>
-    <lastmod>2023-11-05T19:21:07.313Z</lastmod>
-  </url>
-  <url>
     <loc>https://www.whatcandatado.com/posts/Data vs. Information/index.html</loc>
-    <lastmod>2023-11-05T19:21:09.989Z</lastmod>
+    <lastmod>2023-11-06T18:43:30.451Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/posts/DoingDataWranglingRight/ddar.html</loc>
-    <lastmod>2023-11-05T19:21:13.305Z</lastmod>
+    <lastmod>2023-11-06T18:43:28.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Building a Data Intensive Applications/index.html</loc>
+    <lastmod>2023-11-06T18:43:25.559Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/MLflow/index.html</loc>
+    <lastmod>2023-11-06T18:43:24.195Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Delta Lake/index.html</loc>
+    <lastmod>2023-11-06T18:43:20.599Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/about.html</loc>
+    <lastmod>2023-11-06T18:43:18.574Z</lastmod>
   </url>
   <url>
     <loc>https://www.whatcandatado.com/doingdata-series.html</loc>
-    <lastmod>2023-11-05T19:21:15.437Z</lastmod>
+    <lastmod>2023-11-06T18:43:17.090Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/archive.html</loc>
+    <lastmod>2023-11-06T18:43:15.914Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/index.html</loc>
+    <lastmod>2023-11-06T18:43:18.254Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/posts/What is in Data Is Plural/index.html</loc>
+    <lastmod>2023-11-06T18:43:19.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Data Intensive Applications/index.html</loc>
+    <lastmod>2023-11-06T18:43:23.383Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Introduction/index.html</loc>
+    <lastmod>2023-11-06T18:43:24.831Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/posts/DoingDataAtScale/Spark/index.html</loc>
+    <lastmod>2023-11-06T18:43:26.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.whatcandatado.com/posts/welcome/index.html</loc>
+    <lastmod>2023-11-06T18:43:29.599Z</lastmod>
   </url>
 </urlset>

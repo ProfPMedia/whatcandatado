@@ -10,7 +10,647 @@
 <atom:link href="https://www.whatcandatado.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A place for the data curious! Unleashing the power of data, one fascinating byte at a time.</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Sat, 04 Nov 2023 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 06 Nov 2023 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>What is in Data Is Plural?</title>
+  <link>https://www.whatcandatado.com/posts/What is in Data Is Plural/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.whatcandatado.com/posts/What is in Data Is Plural/https:/fivethirtyeight.com/wp-content/uploads/2022/05/DATA-IS-PLURAL-3-4x3-1.png?w=350" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">DIP</figcaption>
+</figure>
+</div>
+<p>At What Can Data Do?, we delve into the wealth of data found in <a href="https://www.data-is-plural.com/">Data is Plural</a>, a weekly newsletter by Jeremy Singer-Vine that showcases a rich selection of datasets. As a long-time admirer, I often turn to this resource when seeking out well-curated data for my research. Jeremy’s compilation boasts over 1,750 datasets and continues to expand each week.</p>
+<p>One challenge I’ve encountered is navigating the archive—it’s not the most search-friendly. While Jeremy provides a Google Sheet with details on the featured datasets, it doesn’t quite facilitate inquiries such as: <strong>“Which datasets in the archive relate to global energy production?”</strong></p>
+<p>To address this, I embarked on enhancing the archive’s searchability. By applying semantic search to the entirety of Data is Plural’s publications, my goal was not only to learn but also to forge a tool that elevates the ease of data discovery. Let’s dive in…</p>
+<section id="what-is-semantic-search" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-semantic-search">What is Semantic Search</h3>
+<p>Semantic search transcends the traditional keyword match, delving into the intent and contextual nuance behind a query to fetch the most pertinent information. Rather than simply scanning for specific terms, it employs sophisticated cognitive tools to consider elements such as:</p>
+<ul>
+<li><p><strong>Contextual Understanding</strong>: Words shift in meaning based on their use. Semantic search aims to grasp this context, refining its accuracy.</p></li>
+<li><p><strong>Recognition of Synonyms</strong>: It appreciates that different terms can share meanings and provides relevant findings even when exact search terms are absent from the content.</p></li>
+<li><p><strong>Natural Language Processing (NLP)</strong>: Utilizing NLP, semantic search interprets the searcher’s intent, managing conversational queries with finesse.</p></li>
+<li><p><strong>Conceptual Insight</strong>: It searches for ideas and meanings rather than just phrase matches, capturing the essence behind the words.</p></li>
+<li><p><strong>Discerning User Intent</strong>: Semantic search adjusts results to align with whether a user aims to purchase, explore, locate, or troubleshoot.</p></li>
+<li><p><strong>Tailored Results</strong>: It may also integrate personal data like past behavior, locale, or time, to customize the search experience.</p></li>
+</ul>
+<p>Powered by machine learning, ontologies, and NLP, semantic search is adept at closing the gap between what users seek and the content they find. This technology proves invaluable in customer support, e-commerce, knowledge management, and content discovery, ensuring users connect more intuitively with the information they require.</p>
+</section>
+<section id="what-is-the-all-mpnet-base-scentence-transformer-and-how-does-it-work" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-all-mpnet-base-scentence-transformer-and-how-does-it-work">What is the all-mpnet-base scentence transformer and how does it work?</h3>
+<p>The <code>all-mpnet-base-v2</code> is a pre-trained model provided by the Hugging Face Sentence Transformers library, which is a Python framework for state-of-the-art sentence, text, and image embeddings. The model is based on the MPNet architecture, which stands for <a href="https://arxiv.org/abs/2004.09297">“Masked and Permuted Pre-training for Language Understanding.”</a></p>
+<p>MPNet is an innovative pre-training method that combines the strengths of BERT (<a href="https://arxiv.org/abs/1810.04805">Bidirectional Encoder Representations from Transformers</a>) and <a href="https://arxiv.org/abs/1906.08237">XLNet architectures</a> to effectively capture the contextual representations of words in a sentence. The MPNet is designed to understand the context from both the left and right sides of a token in the input sequence.</p>
+<p>Here’s how the <code>all-mpnet-base-v2</code> model works in the context of sentence transformers:</p>
+<ol type="1">
+<li><strong>Pre-training:</strong>
+<ul>
+<li>MPNet is pre-trained on a large corpus of text data using self-supervised learning. It uses a novel pre-training objective that masks some of the input tokens and permutes others, allowing the model to learn a deep understanding of language context and word relationships.</li>
+</ul></li>
+<li><strong>Sentence Embeddings:</strong>
+<ul>
+<li>The <code>all-mpnet-base-v2</code> model is fine-tuned to produce sentence embeddings. This means that for any given sentence or paragraph, the model generates a fixed-size vector representation that captures its semantic meaning. These embeddings can be used for a variety of downstream tasks such as semantic search, clustering, and classification.</li>
+</ul></li>
+<li><strong>Fine-tuning for Specific Tasks:</strong>
+<ul>
+<li>Although the model is pre-trained on a general corpus, it can be further fine-tuned on task-specific data to improve performance on particular tasks. For example, if you want to use the model for legal document analysis, you could fine-tune it on a corpus of legal texts.</li>
+</ul></li>
+<li><strong>Usage in Applications:</strong>
+<ul>
+<li>In applications, when you input a sentence to the <code>all-mpnet-base-v2</code> model, it processes the text through multiple transformer layers, generating an embedding vector that you can then use for semantic comparisons, search, or as input features to other machine learning models.</li>
+</ul></li>
+</ol>
+<p>The Sentence Transformers library makes it easy to use these models. You can load the <code>all-mpnet-base-v2</code> model and generate embeddings for your sentences with just a few lines of code. These embeddings are designed to be semantically meaningful, such that sentences with similar meanings are close to each other in the embedding space, which is beneficial for many NLP tasks that require understanding sentence similarity.</p>
+</section>
+<section id="what-is-cosine-simarity-and-how-do-i-calculate-it" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-cosine-simarity-and-how-do-i-calculate-it">What is Cosine Simarity and How do I calculate it?</h3>
+<p>Cosine similarity is a measure of similarity between two non-zero vectors of an inner product space that measures the cosine of the angle between them. The cosine of 0° is 1, and it is less than 1 for any other angle.</p>
+<p>It is thus a judgment of orientation and not magnitude: two vectors with the same orientation have a cosine similarity of 1, two vectors at 90° have a similarity of 0, and two vectors diametrically opposed have a similarity of -1, independent of their magnitude.</p>
+<p>Cosine similarity is particularly used in positive space, where the outcome is neatly bounded in [0,1]. The cosine similarity, <code>S</code>, between two vectors <code>A</code> and <code>B</code> is calculated as follows:</p>
+<p>S(A, B) = dot(A,B) / (||A|| * ||B||)</p>
+<p>where:</p>
+<ul>
+<li>dot(A,B) is the dot product of the vectors,</li>
+<li>||A|| and ||B|| are the norms (magnitudes) of vectors <code>A</code> and <code>B</code>.</li>
+</ul>
+<p>This measure is a metric of the cosine of the angle between two n-dimensional vectors in an n-dimensional space. It should not be confused with a physical space, as it can be used for high dimensional spaces, e.g., text classification in an information retrieval context where each term is a dimension and the terms in a document are modeled as a vector for comparison with other documents.</p>
+</section>
+<section id="how-we-are-going-to-apply-semantic-search-to-the-dip-catalog" class="level3">
+<h3 class="anchored" data-anchor-id="how-we-are-going-to-apply-semantic-search-to-the-dip-catalog">How we are going to apply Semantic Search to the DIP catalog</h3>
+<ul>
+<li>Use the <a href="https://huggingface.co/">Hugging Face</a> open source model library</li>
+<li><a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2#all-mpnet-base-v2">Use the Sentence Transformer</a> It maps sentences &amp; paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.</li>
+<li>Use the cosine similarity measure to assess the “distance” between the descriptions in the catalog and the posed questions.</li>
+</ul>
+</section>
+<section id="step-1---install-the-requisite-python-libraries-needed-to-do-semantic-search" class="level2">
+<h2 class="anchored" data-anchor-id="step-1---install-the-requisite-python-libraries-needed-to-do-semantic-search">Step 1 - Install the requisite python libraries needed to do semantic search</h2>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>pip <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>q install transformers[torch] torch scikit<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>learn protobuf<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.20.0</span> sentence<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>transformers</span></code></pre></div>
+</div>
+</section>
+<section id="step-2---import-the-requisite-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="step-2---import-the-requisite-libraries">Step 2 - Import the requisite libraries</h2>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb2-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb2-3"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> time</span>
+<span id="cb2-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> sentence_transformers <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> SentenceTransformer, util</span></code></pre></div>
+</div>
+</section>
+<section id="step-3---load-the-data-is-plural-catalog-spreadsheet" class="level2">
+<h2 class="anchored" data-anchor-id="step-3---load-the-data-is-plural-catalog-spreadsheet">Step 3 - Load the Data is Plural Catalog Spreadsheet</h2>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Load the CSV and preprocess</span></span>
+<span id="cb3-2">SHEET_ID <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk'</span></span>
+<span id="cb3-3">SHEET_NAME <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Items'</span></span>
+<span id="cb3-4">url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f'https://docs.google.com/spreadsheets/d/</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>SHEET_ID<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">/gviz/tq?tqx=out:csv&amp;sheet=</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>SHEET_NAME<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span></span>
+<span id="cb3-5">data_df <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pd.read_csv(url)</span>
+<span id="cb3-6"></span>
+<span id="cb3-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Take a peak at the first several rows of the data</span></span>
+<span id="cb3-8">data_df.head(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">edition</th>
+<th data-quarto-table-cell-role="th">position</th>
+<th data-quarto-table-cell-role="th">headline</th>
+<th data-quarto-table-cell-role="th">text</th>
+<th data-quarto-table-cell-role="th">links</th>
+<th data-quarto-table-cell-role="th">hattips</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2015.10.21</td>
+<td>1</td>
+<td>Every place name in the United States.</td>
+<td>Sometimes, bureaucracy creates poetry. Since 1...</td>
+<td>http://geonames.usgs.gov/index.html\nhttp://ge...</td>
+<td>https://twitter.com/emilymbadger/status/653982...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2015.10.21</td>
+<td>2</td>
+<td>“There’s finally federal data on low-income co...</td>
+<td>The Hechinger Report casts doubt on the Pell g...</td>
+<td>http://hechingerreport.org/theres-finally-fede...</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2015.10.21</td>
+<td>3</td>
+<td>What police-related data does your city publish?</td>
+<td>The Police Open Data Census, created by Code f...</td>
+<td>https://codeforamerica.github.io/PoliceOpenDat...</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-create-descriptions-and-embedding-vectors-for-each" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-create-descriptions-and-embedding-vectors-for-each">Step 4 Create descriptions and embedding vectors for each</h2>
+<p>(takes several minutes)</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create a list of the headlines and description of each dataset in the catalog</span></span>
+<span id="cb4-2">descriptions <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (data_df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'headline'</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">" "</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> data_df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'text'</span>]).tolist()</span>
+<span id="cb4-3"></span>
+<span id="cb4-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Save the links to each dataset to reference when we are performing the semantic search.</span></span>
+<span id="cb4-5">links <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> data_df[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'links'</span>].tolist()</span>
+<span id="cb4-6"></span>
+<span id="cb4-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Load the Sentence Transformer model</span></span>
+<span id="cb4-8">model <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> SentenceTransformer(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'sentence-transformers/all-mpnet-base-v2'</span>)</span>
+<span id="cb4-9"></span>
+<span id="cb4-10">start_time <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> time.time()</span>
+<span id="cb4-11"></span>
+<span id="cb4-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Convert dataset descriptions to embeddings and store them NOT</span></span>
+<span id="cb4-13">embeddings <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> model.encode(descriptions, convert_to_tensor<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb4-14"></span>
+<span id="cb4-15">end_time <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> time.time()</span>
+<span id="cb4-16">elapsed_time <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> end_time <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> start_time</span>
+<span id="cb4-17"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"The embedding of </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(descriptions)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> descriptions took </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>elapsed_time<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:4.0f}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> seconds to run"</span>)</span>
+<span id="cb4-18"></span>
+<span id="cb4-19"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"An example dataset description and its associated embedding..."</span>)</span>
+<span id="cb4-20"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(descriptions[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>])</span>
+<span id="cb4-21"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"The vectors are </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(embeddings[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>])<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> in length.</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">The first 10 elements of the vector for this description are:</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>embeddings[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>][<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>]<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb4-22">      </span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The embedding of 1750 descriptions took  169 seconds to run
+An example dataset description and its associated embedding...
+Every place name in the United States. Sometimes, bureaucracy creates poetry. Since 1890, the U.S. Board on Geographic Names has been cataloguing, standardizing, and promulgating official names for the places we hike, swim, work, and call home. Along the way, it began publishing Geographic Names Information System (GNIS), a searchable and downloadable database containing all of its domestic nomenclature. In Alaska alone, the database lists names for 167 dams, 303 post offices, 666 glaciers, 2,704 capes, and 9,575 streams. My favorite: Confusion Creek. [h/t @emilymbadger]
+The vectors are 768 in length.
+The first 10 elements of the vector for this description are:
+tensor([ 0.0570,  0.0512, -0.0187, -0.0174, -0.0091,  0.0062,  0.0331, -0.0004,
+         0.0364, -0.0083])</code></pre>
+</div>
+</div>
+</section>
+<section id="step-5-create-a-utility-function-that-returns-the-closest-matches-to-a-question." class="level2">
+<h2 class="anchored" data-anchor-id="step-5-create-a-utility-function-that-returns-the-closest-matches-to-a-question.">Step 5 Create a utility function that returns the closest matches to a question.</h2>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb6-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">This function takes the following arguments:</span></span>
+<span id="cb6-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> - question (str)</span></span>
+<span id="cb6-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> - embeddings (tensor)</span></span>
+<span id="cb6-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> - descriptions (list)</span></span>
+<span id="cb6-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> - links (list)</span></span>
+<span id="cb6-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> - top_k (scalar)</span></span>
+<span id="cb6-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> </span></span>
+<span id="cb6-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">And returns the top_k closest descriptions to the question that was posed.</span></span>
+<span id="cb6-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">The routine uses the cosine similarity to assess the "distance" between the descriptions of the datasets</span></span>
+<span id="cb6-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">and the question that was posed.</span></span>
+<span id="cb6-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb6-13"></span>
+<span id="cb6-14"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> find_closest_matches(question, embeddings, descriptions, links, top_k<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>):</span>
+<span id="cb6-15">    question_embedding <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> model.encode(question, convert_to_tensor<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb6-16">    </span>
+<span id="cb6-17">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Compute cosine similarities</span></span>
+<span id="cb6-18">    similarities <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [util.pytorch_cos_sim(question_embedding, desc_embedding).item() <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> desc_embedding <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> embeddings]</span>
+<span id="cb6-19">    </span>
+<span id="cb6-20">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get the indices of top matches</span></span>
+<span id="cb6-21">    top_indices <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.argsort(similarities)[<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>top_k:][::<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb6-22">    </span>
+<span id="cb6-23">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> [(descriptions[idx], similarities[idx], links[idx]) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> idx <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> top_indices]</span></code></pre></div>
+</div>
+</section>
+<section id="step-6-answer-questions-about-the-data-is-plural-catalog" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-answer-questions-about-the-data-is-plural-catalog">Step 6 Answer questions about the Data Is Plural Catalog</h2>
+<p>return similar datasets to the question including its description and a link to its source.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define the minimum similarity for a match</span></span>
+<span id="cb7-2">MIN_SIM <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.6</span></span>
+<span id="cb7-3"></span>
+<span id="cb7-4"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">while</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>:</span>
+<span id="cb7-5">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ask for a question</span></span>
+<span id="cb7-6">    question <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">input</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Please enter your question (or type 'exit' to quit): "</span>)</span>
+<span id="cb7-7">    </span>
+<span id="cb7-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> question.lower() <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'exit'</span>:</span>
+<span id="cb7-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span></span>
+<span id="cb7-10">    </span>
+<span id="cb7-11">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Find and print closest matches</span></span>
+<span id="cb7-12">    matches <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> find_closest_matches(question, embeddings, descriptions, links, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span>)</span>
+<span id="cb7-13">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Top matches:"</span>)</span>
+<span id="cb7-14">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i, (desc, score, link) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">enumerate</span>(matches, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb7-15">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> MIN_SIM:</span>
+<span id="cb7-16">            <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>i<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">. </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>desc<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">(Score: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>score<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:.4f}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">) References:"</span>)</span>
+<span id="cb7-17">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> r <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> link.split():</span>
+<span id="cb7-18">                <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"* </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>r<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb7-19">        </span></code></pre></div>
+<div class="cell-output cell-output-stdin">
+<pre><code>
+Please enter your question (or type 'exit' to quit):  Which datasets in the archive relate to global energy production?
+
+Please enter your question (or type 'exit' to quit):  exit</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Top matches:
+
+1. Grid emissions. Ember, an “energy think tank that uses data-driven insights to shift the world from coal to clean electricity,” has begun  compiling annual and monthly statistics on electricity demand, generation, and estimated greenhouse gas emissions by country, standardized from national and international sources. The annual estimates span two decades and 200+ countries and territories; the monthly dataset provides somewhat less coverage. Both can also be explored online. Related: Singularity’s Open Grid Emissions initiative estimates the hourly grid emissions of balancing authorities and power plants in the US, currently for 2019 and 2020. Previously: Other energy-related datasets. [h/t Philippe Quirion]
+(Score: 0.6854) References:
+* https://ember-climate.org/
+* https://twitter.com/nicolasfulghum/status/1572974235932364800
+* https://ember-climate.org/data-catalogue/yearly-electricity-data/
+* https://ember-climate.org/data-catalogue/monthly-electricity-data/
+* https://ember-climate.org/data/data-explorer/
+* https://singularity.energy/
+* https://singularity.energy/open-grid-emissions
+* https://medium.com/singularity-energy/validating-real-time-electricity-emissions-rates-with-an-hourly-historical-benchmark-a9990a2c9049
+* https://www.eia.gov/todayinenergy/detail.php?id=27152
+* https://www.data-is-plural.com/collections/energy
+
+2. European energy imports/exports. The EU’s Eurostat office publishes a range of statistical datasets on energy usage and economics, including annual imports and exports of petroleum, natural gas, and coal between European countries and their trading partners. Related: The Energy Information Administration tracks US imports and exports of petroleum, natural gas, and coal. As seen in: How Europe is dependent on Russian gas (New Statesman) and Why the Toughest Sanctions on Russia Are the Hardest for Europe to Wield (New York Times). Previously: European gas storage (DIP 2022.01.26), state-owned oil companies (DIP 2019.05.01), and global and gas infrastructure (DIP 2018.06.06). [h/t Lisa Charlotte Muth]
+(Score: 0.6618) References:
+* https://en.wikipedia.org/wiki/Eurostat
+* https://ec.europa.eu/eurostat/databrowser/explore/all/envir?lang=en&amp;subtheme=nrg&amp;display=list&amp;sort=category&amp;extractionId=NRG_TI_SFF__custom_2293925
+* https://ec.europa.eu/eurostat/databrowser/explore/all/envir?lang=en&amp;subtheme=nrg.nrg_quant.nrg_quanta.nrg_t.nrg_ti&amp;display=list&amp;sort=category&amp;extractionId=NRG_TI_SFF__custom_2293925
+* https://ec.europa.eu/eurostat/databrowser/explore/all/envir?lang=en&amp;subtheme=nrg.nrg_quant.nrg_quanta.nrg_t.nrg_te&amp;display=list&amp;sort=category&amp;extractionId=NRG_TI_SFF__custom_2293925
+* https://www.eia.gov/
+* https://www.eia.gov/petroleum/data.php#imports
+* https://www.eia.gov/naturalgas/data.php#imports
+* https://www.eia.gov/coal/data.php#imports
+* https://www.newstatesman.com/chart-of-the-day/2022/02/how-europe-is-dependent-on-russian-gas
+* https://www.nytimes.com/2022/02/25/business/economy/russia-europe-sanctions-gas-oil.html
+* https://agsi.gie.eu/
+* https://www.data-is-plural.com/archive/2022-01-26-edition/
+* https://www.nationaloilcompanydata.org/
+* https://www.data-is-plural.com/archive/2019-05-01-edition/
+* https://edx.netl.doe.gov/dataset/global-oil-gas-features-database
+* https://www.data-is-plural.com/archive/2018-06-06-edition/
+
+3. Wind and solar power. The Global Energy Monitor’s Global Wind Power Tracker is “a worldwide dataset of utility-scale wind facilities,” focusing on those with planned or installed capacities of at least 10 megawatts. It provides each facility’s name, location, status, capacity, installation type, owner, and other details. The project launched last week alongside a sibling dataset, the Global Solar Power Tracker. They join a growing collection of trackers from the organization, including those examining coal infrastructure, steel plants, and oil and gas resources. [h/t Nathaniel Hoffman]
+(Score: 0.6298) References:
+* https://globalenergymonitor.org/about/our-story/
+* https://globalenergymonitor.org/projects/global-wind-power-tracker/
+* https://globalenergymonitor.org/press-release/new-trackers-showing-country-by-country-build-out-of-utility-scale-solar-and-wind/
+* https://globalenergymonitor.org/projects/global-solar-power-tracker/
+* https://globalenergymonitor.org/about/our-story/
+* https://globalenergymonitor.org/projects/
+* https://globalenergymonitor.org/projects/global-coal-tracker/
+* https://globalenergymonitor.org/projects/global-steel-plant-tracker/
+* https://globalenergymonitor.org/projects/global-oil-gas-extraction-tracker/
+
+4. Power plants. The Global Power Plant Database, published by the World Resources Institute, “is a comprehensive, open source database of power plants around the world” and contains “information on plant capacity, generation, ownership, and fuel type.” The current edition, released in June 2018, covers 28,600+ power plants in 164 countries — including more than 1,000 each in Brazil, Canada, China, Great Britain, France, and the United States. Previously: U.S. power plants (DIP 2016.02.10). [h/t Kelly Rose + Paul Deane]
+(Score: 0.6279) References:
+* http://datasets.wri.org/dataset/globalpowerplantdatabase
+* https://www.wri.org/our-work
+* https://www.eia.gov/electricity/data/eia923/
+* https://tinyletter.com/data-is-plural/letters/data-is-plural-2016-02-10-edition
+
+5. Oil and gas. The Joint Organisations Data Initiative (JODI) coordinates the collection, standardization, and publication of oil and gas data from around the world; the 100+ countries that participate represent the vast majority of global production. The oil data goes back to 2002; the gas data goes back to 2009. Both datasets are updated monthly and track a range of subproducts (e.g., crude oil, diesel, jet fuel) and flows (e.g., imports, exports, production) for each country. Previously: Global and gas infrastructure (DIP 2018.06.06) and state-owned oil companies (DIP 2019.05.01).
+(Score: 0.6203) References:
+* https://www.jodidata.org/about-jodi/history.aspx
+* https://www.jodidata.org/about-jodi/jodi-world-databases.aspx
+* https://www.jodidata.org/gas/database/data-downloads.aspx
+* https://edx.netl.doe.gov/dataset/global-oil-gas-features-database
+* https://tinyletter.com/data-is-plural/letters/data-is-plural-2018-06-06-edition
+* https://tinyletter.com/data-is-plural/letters/data-is-plural-2019-05-01-edition
+* https://tinyletter.com/data-is-plural/letters/data-is-plural-2019-05-01-edition</code></pre>
+</div>
+</div>
+</section>
+<section id="and-with-that-we-wrap-up-for-the-moment" class="level2">
+<h2 class="anchored" data-anchor-id="and-with-that-we-wrap-up-for-the-moment">And with that, we wrap up for the moment…</h2>
+<p>Don’t forget to hit subscribe on the <a href="https://www.youtube.com/@whatcandatado?sub_confirmation=1">What Can Data Do?</a> YouTube channel. Stay tuned for those succinct data nuggets tailor-made for the ever-busy data enthusiasts. In data, we trust!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>EDA</category>
+  <category>LLM</category>
+  <guid>https://www.whatcandatado.com/posts/What is in Data Is Plural/index.html</guid>
+  <pubDate>Mon, 06 Nov 2023 05:00:00 GMT</pubDate>
+</item>
 <item>
   <title>The Alchemy of Transforming Data into Information</title>
   <link>https://www.whatcandatado.com/posts/Data vs. Information/index.html</link>
